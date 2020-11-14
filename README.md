@@ -18,19 +18,25 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
  -   Trackpoint/Touchpad
  -   Power management/sleep
  -   FaceTime/iMessage
+ -   DisplayPort
+ -   Automatic OS updates
+ -   DVD Drive
 
 ### Not tested yet:
 
- - DisplayPort & VGA
- - Automatic OS updates
- - Dock USB ports
- - Dock HDMI, DisplayPort, DVI and VGA
- - DVD Drive
+ -   Dock USB ports
+ -   Dock HDMI, DisplayPort, DVI and VGA
+
+### Not working:
+ -   VGA
 
 ## Changelog
 
+### Version 1.0.1 (14.11.2020)
+ -   Fixed Audio Jack
+
 ### Version 1.0 (14.11.2020)
-Initial Release.
+ -   Initial Release.
 
 # Installation Guide
 ## Requirements
@@ -39,7 +45,7 @@ Initial Release.
  - Lenovo ThinkPad T440p (Obviously :D).
  - Access to a working Windows machine.
  - A 16 GB pendrive (Keep in mind, during the preperation we will format the disk to create the install media).
- - a Internet connection over LAN.
+ - an Internet connection via Ethernet.
  - 1-2 hours of your time.
 
 ## Preperation
@@ -124,7 +130,7 @@ Now you can go through the install.
 If you want to install macOS Big Sur, you need to upgrade your macOS installation. After installing macOS Catalina, download the macOS Big Sur Installer from the App Store. Then start the installer and follow the steps on your screen. This process can take up to **1-2 hours**.
 
 ## (Optional) Creating a offline install media
-In case of reinstalling macOS, a offline install media can save some time. You also don't need a Ethernet connection for the installation. 
+In case of reinstalling macOS, a offline install media can save some time. You also don't need an Ethernet connection for the installation. 
 
 To create a offline install media, you need the following stuff:
 

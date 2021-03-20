@@ -126,9 +126,6 @@ PlatformInfo -> Generic -> ROM
 
 Delete the generic 112233445566 value, and enter your MAC address into the field, without any colons. Save the Plist file, and it is now ready to be written out to the EFI partition of your install media.
 
-### Install OpenCore
-After you've finished with the neccesary tweaks, you have to copy the EFI folder the EFI partition of your pendrive.
-
 ## Installation
 ### Prepare BIOS
 The bios must be properly configured prior to installing MacOS.

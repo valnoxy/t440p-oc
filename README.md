@@ -17,7 +17,7 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
 - FaceTime/iMessage
 - DisplayPort
 - Automatic OS updates
-- DVD Drive  
+- DVD Drive
 
 ### Not tested yet:
 - Dock USB ports
@@ -27,25 +27,30 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
 - VGA
 
 ## Changelog
+### Version 1.1.0 (21.04.2021)
+- Add new Theme [BsxDarkFencePinkPurple1](https://github.com/blackosx/BsxDarkFencePinkPurple1_) (you can enable it by changing the value of ```PickerVariant``` to ```BsxDarkFencePinkPurple1_```)
+- Add Tool (ResetSystem.efi)
+- Update Kexts and drivers
+- Update OpenCore (REL-069-2021-04-21)
 
-### Version 1.0.2 (20.03.2020)
-- Updated Introduction
-- Removed Tools
+### Version 1.0.1 (20.03.2021)
+- Remove Tools
+- Update Introduction
 
 ### Version 1.0.1 (14.11.2020)
-- Fixed Audio Jack
+- Fix Audio Jack
 
 ### Version 1.0 (14.11.2020)
 - Initial Release.
 
 # Download
-Latest Release:  [v.1.0.2](https://github.com/valnoxy/t440p-oc/releases/tag/v1.0.2)
+Latest Release: [v.1.1.0](https://github.com/valnoxy/t440p-oc/releases/tag/v1.1.0)
 
 # Installation Guide
 ## Requirements
 You must have the following stuff:
-
 - Lenovo ThinkPad T440p (Obviously 😁).
+
 - Access to a working Windows machine with Python installed.
 - A 16 GB pendrive (Keep in mind, during the preperation we will format the disk to create the install media).
 - an Internet connection via Ethernet.
@@ -53,10 +58,10 @@ You must have the following stuff:
 
 ## Preperation
 ### Creating the install media
+
 First of all, you will need the install media of macOS. I will use [macrecovery](https://github.com/acidanthera/OpenCorePkg) to download and create the macOS Install media.
 
 With macrecovery, the process is the following:
-
 - Download [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) as a ZIP.
 - Extract the OpenCorePkg-master.zip file.
 - Open ```cmd.exe``` with Administrator privileges and change the directory to OpenCorePkg-master\Utilities\macrecovery.
@@ -92,16 +97,23 @@ python macrecovery.py -b Mac-00BE6ED71E35EB86 -m 00000000000000000 download
 # Big Sur(11)
 python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download
 ```
-
 - After the download succeeded, type ```diskpart``` and wait until you see ```DISKPART>```
+
 - Plug-in your pendrive and type ```list disk``` to see your disk id.
+
 - Select your pendrive by typing ```select disk <diskid>```
+
 - Now we are gonna clean the pendrive and convert it to GPT. First, type ```clean``` and then ```convert gpt```.
-> **Note**: If an error occurred, try to convert again by typing ```convert gpt```.
+
+>  **Note**: If an error occurred, try to convert again by typing ```convert gpt```.
+
 - After the pendrive is clean and converted, we will create a new partition where we can put our files on. First, type ```create partition primary```, then select the new partition with ```select partition 1``` and format it ```format fs=fat32 quick```.
+
 - Finally, mount your pendrive by typing ```assign letter=J```
-- Now, close the Command Prompt and create the folder ```com.apple.recovery.boot``` on the pendrive. Copy  ```OpenCorePkg-master\Utilities\macrecovery\BaseSystem.dmg``` and ```Basesystem.chunklist``` into that folder.
-> **Note**: If you can't find BaseSystem.dmg, use RecoveryImage.dmg and RecoveryImage.chunklist instead.
+
+- Now, close the Command Prompt and create the folder ```com.apple.recovery.boot``` on the pendrive. Copy ```OpenCorePkg-master\Utilities\macrecovery\BaseSystem.dmg``` and ```Basesystem.chunklist``` into that folder.
+
+>  **Note**: If you can't find BaseSystem.dmg, use RecoveryImage.dmg and RecoveryImage.chunklist instead.
 
 After the install media was created, we need to make the USB drive bootable.
 
@@ -126,11 +138,14 @@ PlatformInfo -> Generic -> ROM
 
 Delete the generic 112233445566 value, and enter your MAC address into the field, without any colons. Save the Plist file, and it is now ready to be written out to the EFI partition of your install media.
 
+### Install OpenCore
+After you've finished with the neccesary tweaks, you have to copy the EFI folder the EFI partition of your pendrive.
+
 ## Installation
 ### Prepare BIOS
 The bios must be properly configured prior to installing MacOS.
-
 In Security menu, set the following settings:
+
 
 -  `Security > Security Chip`: must be **Disabled**
 -  `Memory Protection > Execution Prevention`: must be **Enabled**
@@ -141,6 +156,7 @@ In Security menu, set the following settings:
 
 In Startup menu, set the following options:
 
+  
 -  `UEFI/Legacy Boot`: **Both**
 -  `UEFI/Legacy Priority`: **UEFI First**
 -  `CSM Support`: **Yes**
@@ -162,7 +178,7 @@ Now you can go through the install.
 
 ## (Optional) Creating a offline install media
 In case of reinstalling macOS, a offline install media can save some time. You also don't need an Ethernet connection for the installation.
-To create a offline install media, you need the following stuff:
+To create a offline install media, you need the following stuff: 
 
 - macOS Installer from the App Store.
 - A 16 GB pendrive (Keep in mind, during the preperation we will format the disk to create the install media).
@@ -175,7 +191,7 @@ Big Sur:
 ```sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/MyUSB --downloadassets```
 
 Catalina:
-```sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyUSB --downloadassets```  
+```sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyUSB --downloadassets```
 
 After creating the install media, copy your EFI folder to the EFI partition of your USB device.
 

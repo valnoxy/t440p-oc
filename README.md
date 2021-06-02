@@ -27,6 +27,12 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
 - VGA
 
 ## Changelog
+### Version 1.2.0 (02.06.2021)
+- Add UltrabayHDD support
+- Add Intel Bluetooth kext
+- Add AppleALC kext
+- Removed VoodooHDA kext
+
 ### Version 1.1.0 (21.04.2021)
 - Add new Theme [BsxDarkFencePinkPurple1](https://github.com/blackosx/BsxDarkFencePinkPurple1_) (you can enable it by changing the value of ```PickerVariant``` to ```BsxDarkFencePinkPurple1_```)
 - Add Tool (ResetSystem.efi)
@@ -44,7 +50,7 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
 - Initial Release.
 
 # Download
-Latest Release: [v.1.1.0](https://github.com/valnoxy/t440p-oc/releases/tag/v1.1.0)
+Latest Release: [v.1.2.0](https://github.com/valnoxy/t440p-oc/releases/tag/v1.2.0)
 
 # Installation Guide
 ## Requirements

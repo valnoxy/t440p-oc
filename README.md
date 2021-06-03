@@ -27,6 +27,9 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
 - VGA
 
 ## Changelog
+### Version 1.2.1 (03.06.2021)
+- Fix Headphones buzzing noise
+
 ### Version 1.2.0 (02.06.2021)
 - Add UltrabayHDD support
 - Add Intel Bluetooth kext
@@ -50,13 +53,12 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
 - Initial Release.
 
 # Download
-Latest Release: [v.1.2.0](https://github.com/valnoxy/t440p-oc/releases/tag/v1.2.0)
+Latest Release: [v.1.2.1](https://github.com/valnoxy/t440p-oc/releases/tag/v1.2.1)
 
 # Installation Guide
 ## Requirements
 You must have the following stuff:
 - Lenovo ThinkPad T440p (Obviously 😁).
-
 - Access to a working Windows machine with Python installed.
 - A 16 GB pendrive (Keep in mind, during the preperation we will format the disk to create the install media).
 - an Internet connection via Ethernet.
@@ -178,9 +180,23 @@ Now you can go through the install.
 >  **Note:** Your PC will restart multiple times. Just boot from USB and select your disk inside of OpenCore. (named macOS Installer or the disk name).
 5. Once you see the `Region selection` screen, you are good to proceed.
 6. Create your user accound and everything else.
-7. After you've booted, press `ALT + SPACE` and open terminal. Type `sudo diskutil mountDisk disk0s1` (where disk0s1 corresponds to the EFI partition of the main disk)
-8. Open Finder and copy the EFI folder of your USB device to the main disk's EFI partition.
-9. Unplug the USB device and reboot your laptop. Now you can enjoy your working installation.
+
+## Post-Install
+### Install EFI
+1. Press `ALT + SPACE` and open terminal. Type `sudo diskutil mountDisk disk0s1` (where disk0s1 corresponds to the EFI partition of the main disk)
+2. Open Finder and copy the EFI folder of your USB device to the main disk's EFI partition.
+3. Unplug the USB device and reboot your laptop. Now you can boot macOS without your USB device.
+
+### Fix Audio Jack noise
+1. Copy `ALCPlugFix` to your desktop.
+2. Press `ALT + SPACE` and open terminal. Type the following commands: 
+```bash
+sudo spctl --master-disable
+sudo mkdir /usr/local/bin/
+cd Desktop/ALCPlugFix
+./install.sh
+```
+3. After that, type `hda-verb 0x1a SET_PIN_WIDGET_CONTROL 0x24`.
 
 ## (Optional) Creating a offline install media
 In case of reinstalling macOS, a offline install media can save some time. You also don't need an Ethernet connection for the installation.
@@ -203,5 +219,3 @@ After creating the install media, copy your EFI folder to the EFI partition of y
 
 ## Feedback
 Did you find any bugs or just have some questions? Feel free to provide your feedback using the Issues tab on GitHub or send me a mail to `hey@exploitox.de`.
-
-**Note:** Currently, I cannot provide any support due to upcoming exams.

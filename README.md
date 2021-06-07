@@ -1,9 +1,11 @@
 ﻿# Lenovo ThinkPad T440p Hackintosh (OC)
-![macOS Big Sur running on the T440p](https://dl.exploitox.de/t440p-oc/Hackintosh_T440p_V2.png)
+![macOS Big Sur running on the T440p](https://dl.exploitox.de/t440p-oc/Hackintosh_T440p_V3.png)
 
 ## Information
 This guide is only for the Lenovo ThinkPad T440p.
 I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
+
+>   **Note**: This repo include support for macOS Monterey, but it is provided as **beta** and is not recommended for daily usage.
 
 ### What works:
 - WiFi & Bluetooth (Intel, thanks to [itlwn](https://github.com/OpenIntelWireless/itlwm))
@@ -27,6 +29,9 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
 - VGA
 
 ## Changelog
+### Version 1.3.0 (08.06.2021)
+- Support macOS Monterey (Beta)
+
 ### Version 1.2.1 (03.06.2021)
 - Fix Headphones buzzing noise
 
@@ -53,7 +58,7 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
 - Initial Release.
 
 # Download
-Latest Release: [v.1.2.1](https://github.com/valnoxy/t440p-oc/releases/tag/v1.2.1)
+Latest Release: [v.1.3.0](https://github.com/valnoxy/t440p-oc/releases/tag/v1.2.1)
 
 # Installation Guide
 ## Requirements
@@ -65,6 +70,9 @@ You must have the following stuff:
 - 1-2 hours of your time.
 
 ## Preperation
+
+>   **Note**: If you want to install macOS Monterey, you need to upgrade from Big Sur, or create an **offline** install media (see down below). Use the `config_beta.plist` for the installation.
+
 ### Creating the install media
 
 First of all, you will need the install media of macOS. I will use [macrecovery](https://github.com/acidanthera/OpenCorePkg) to download and create the macOS Install media.
@@ -137,6 +145,7 @@ The process is the following:
 - Start GenSMBIOS.bat and use option 1 to download MacSerial.
 - Choose option 2, to select the path of the config.plist file. It will be located in EFI -> OC folder.
 - Choose option 3, and enter MacBookPro11,1 as the machine type.
+>   **Note**: If you want to install macOS Monterey, type as machine type `MacBookPro12,1`
 - Press Q to quit. Your config now should contain the requied serials.
 
 #### Enter the proper ROM value
@@ -214,6 +223,9 @@ Big Sur:
 
 Catalina:
 ```sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyUSB --downloadassets```
+
+Monterey (Beta):
+```sudo /Applications/Install\ macOS\ 12\ Beta.app/Contents/Resources/createinstallmedia --volume /Volumes/MyUSB --downloadassets```
 
 After creating the install media, copy your EFI folder to the EFI partition of your USB device.
 

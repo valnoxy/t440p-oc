@@ -7,6 +7,9 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
 
 >   **Note**: This repo include support for macOS Monterey, but it is provided as **beta** and is not recommended for daily usage.
 
+## YouTube Video
+[![YouTube Video](http://img.youtube.com/vi/6Uz63UQiApQ/0.jpg)](http://www.youtube.com/watch?v=6Uz63UQiApQ "macOS on ThinkPad T440p")
+
 ### What works:
 - WiFi & Bluetooth (Intel, thanks to [itlwn](https://github.com/OpenIntelWireless/itlwm))
 - Brightness/Volume Control

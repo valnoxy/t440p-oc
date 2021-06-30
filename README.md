@@ -1,17 +1,47 @@
-﻿# Lenovo ThinkPad T440p Hackintosh (OC)
-![macOS Big Sur running on the T440p](https://dl.exploitox.de/t440p-oc/Hackintosh_T440p_V3.png)
+﻿![macOS Big Sur running on the T440p](https://dl.exploitox.de/t440p-oc/Hackintosh_T440p_V3.png)
 
-## Information
+<h3 align="center">Lenovo ThinkPad T440p - OpenCore Configuation</h3>
+<p align="center">
+    <strong>Version: </strong>1.4.0
+    <br />
+    <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/valnoxy/t440p-oc/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/valnoxy/t440p-oc/blob/main/CHANGELOG.md">View Changelog</a>
+    ·
+    <a href="https://github.com/valnoxy/t440p-oc/blob/main/CHANGELOG.md">YouTube Video</a>
+  </p>
+</p>
+
+![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
+
+## 🔔 Information
 This guide is only for the Lenovo ThinkPad T440p.
 I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
 
 >   **Note**: This repo include support for macOS Monterey, but it is provided as **beta** and is not recommended for daily usage.
 
-## YouTube Video
-[![YouTube Video](http://img.youtube.com/vi/6Uz63UQiApQ/0.jpg)](http://www.youtube.com/watch?v=6Uz63UQiApQ "macOS on ThinkPad T440p")
+### EFI folders
+There are different EFIs for different situations.
 
-### What works:
-- WiFi & Bluetooth (Intel, thanks to [itlwn](https://github.com/OpenIntelWireless/itlwm))
+| EFI               | Description                                              | Type      |
+| ----------------- | -------------------------------------------------------- | --------- |
+| `EFI - Catalina`  | Supports only macOS Catalina                             | `Release` |
+| `EFI - Big Sur`   | Supports only macOS Big Sur                              | `Release` |
+| `EFI - Monterey`  | Supports only macOS Monterey                             | `Beta`    |
+| `EFI - HeliPort`  | Supports every macOS Version, Require HeliPort app       | `Release` |
+
+> **Note**: In order to use Heliport with macOS Monterey, apply every changes mentioned in ```DIFFERENCES.md``` in ```EFI - Monterey -> Config.plist```
+
+<a href="https://github.com/valnoxy/t440p-oc/blob/main/DIFFERENCES.md"><strong>
+Differences to the EFI folders »</strong></a>
+
+<a href="https://github.com/OpenIntelWireless/HeliPort/releases"><strong>
+Download HeliPort app »</strong></a>
+### What works
+- Intel WiFi & Bluetooth (thanks to [itlwn](https://github.com/OpenIntelWireless/itlwm))
 - Brightness/Volume Control
 - Battery Information
 - Audio (Audio Jack & Speaker)
@@ -24,55 +54,23 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
 - Automatic OS updates
 - DVD Drive
 
-### Not tested yet:
+### Not tested yet
 - Dock USB ports
 - Dock HDMI, DisplayPort, DVI and VGA
 
-### Not working:
+### Not working
 - VGA
 
-## Changelog
-### Version 1.3.0 (08.06.2021)
-- Support macOS Monterey (Beta)
-
-### Version 1.2.1 (03.06.2021)
-- Fix Headphones buzzing noise
-
-### Version 1.2.0 (02.06.2021)
-- Add UltrabayHDD support
-- Add Intel Bluetooth kext
-- Add AppleALC kext
-- Removed VoodooHDA kext
-
-### Version 1.1.0 (21.04.2021)
-- Add new Theme [BsxDarkFencePinkPurple1](https://github.com/blackosx/BsxDarkFencePinkPurple1_) (you can enable it by changing the value of ```PickerVariant``` to ```BsxDarkFencePinkPurple1_```)
-- Add Tool (ResetSystem.efi)
-- Update Kexts and drivers
-- Update OpenCore (REL-069-2021-04-21)
-
-### Version 1.0.1 (20.03.2021)
-- Remove Tools
-- Update Introduction
-
-### Version 1.0.1 (14.11.2020)
-- Fix Audio Jack
-
-### Version 1.0 (14.11.2020)
-- Initial Release.
-
-# Download
-Latest Release: [v.1.3.0](https://github.com/valnoxy/t440p-oc/releases/tag/v1.2.1)
-
-# Installation Guide
-## Requirements
+# 📖 Installation Guide
+## 📝 Requirements
 You must have the following stuff:
 - Lenovo ThinkPad T440p (Obviously 😁).
 - Access to a working Windows machine with Python installed.
-- A 16 GB pendrive (Keep in mind, during the preperation we will format the disk to create the install media).
+- A pendrive with more than 4 GB (Keep in mind, during the preperation we will format the disk to create the install media).
 - an Internet connection via Ethernet.
 - 1-2 hours of your time.
 
-## Preperation
+## ⚙️ Preperation
 
 >   **Note**: If you want to install macOS Monterey, you need to upgrade from Big Sur, or create an **offline** install media (see down below). Use the `config_beta.plist` for the installation.
 
@@ -86,34 +84,10 @@ With macrecovery, the process is the following:
 - Open ```cmd.exe``` with Administrator privileges and change the directory to OpenCorePkg-master\Utilities\macrecovery.
 - Enter the following command to download macOS:
 ```
-# Lion(10.7):
-python macrecovery.py -b Mac-2E6FAB96566FE58C -m 00000000000F25Y00 download
-
-# Mountain Lion(10.8):
-python macrecovery.py -b Mac-7DF2A3B5E5D671ED -m 00000000000F65100 download
-
-# Mavericks(10.9):
-python macrecovery.py -b Mac-F60DEB81FF30ACF6 -m 00000000000FNN100 download
-
-# Yosemite(10.10):
-python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000GDVW00 download
-
-# El Capitan(10.11):
-python macrecovery.py -b Mac-FFE5EF870D7BA81A -m 00000000000GQRX00 download
-
-# Sierra(10.12):
-python macrecovery.py -b Mac-77F17D7DA9285301 -m 00000000000J0DX00 download
-
-# High Sierra(10.13)
-python macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m 00000000000J80300 download
-
-# Mojave(10.14)
-python macrecovery.py -b Mac-7BA5B2DFE22DDD8C -m 00000000000KXPG00 download
-
-# Catalina(10.15)
+# Catalina (10.15)
 python macrecovery.py -b Mac-00BE6ED71E35EB86 -m 00000000000000000 download
 
-# Big Sur(11)
+# Big Sur (11)
 python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download
 ```
 - After the download succeeded, type ```diskpart``` and wait until you see ```DISKPART>```
@@ -161,7 +135,7 @@ Delete the generic 112233445566 value, and enter your MAC address into the field
 ### Install OpenCore
 After you've finished with the neccesary tweaks, you have to copy the EFI folder the EFI partition of your pendrive.
 
-## Installation
+## 🚚 Installation
 ### Prepare BIOS
 The bios must be properly configured prior to installing MacOS.
 In Security menu, set the following settings:
@@ -193,7 +167,7 @@ Now you can go through the install.
 5. Once you see the `Region selection` screen, you are good to proceed.
 6. Create your user accound and everything else.
 
-## Post-Install
+## 🚚 Post-Install
 ### Install EFI
 1. Press `ALT + SPACE` and open terminal. Type `sudo diskutil mountDisk disk0s1` (where disk0s1 corresponds to the EFI partition of the main disk)
 2. Open Finder and copy the EFI folder of your USB device to the main disk's EFI partition.
@@ -232,5 +206,5 @@ Monterey (Beta):
 
 After creating the install media, copy your EFI folder to the EFI partition of your USB device.
 
-## Feedback
+## ⭐️ Feedback
 Did you find any bugs or just have some questions? Feel free to provide your feedback using the Issues tab on GitHub or send me a mail to `hey@exploitox.de`.

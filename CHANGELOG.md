@@ -2,14 +2,20 @@
 
 <h3 align="center">Lenovo ThinkPad T440p - OpenCore Configuation</h3>
 <p align="center">
-    Changelog
-    <br />
     <a href="https://github.com/valnoxy/t440p-oc/"><strong>Go back »</strong></a>
     <br />
   </p>
 </p>
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
+
+### Version 1.5.0 (17.07.2021)
+- Update OpenCore to 0.7.1
+- Update USBPort.kext
+- Change model to ```MacBookPro12,1```
+- Add Tool (TpmInfo.efi)
+- Remove Theme ([BsxDarkFencePinkPurple1](https://github.com/blackosx/BsxDarkFencePinkPurple1_))
+- Remove Tool (ResetSystem.efi)
 
 ### Version 1.4.0 (30.06.2021)
 - Update Kexts

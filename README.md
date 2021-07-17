@@ -2,7 +2,7 @@
 
 <h3 align="center">Lenovo ThinkPad T440p - OpenCore Configuation</h3>
 <p align="center">
-    <strong>Version: </strong>1.4.0
+    <strong>Version: </strong>1.5.0
     <br />
     <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
     <br />
@@ -23,6 +23,9 @@ I am NOT responsible for any harm you cause to your device. This guide is provid
 
 >   **Note**: This repo include support for macOS Monterey, but it is provided as **beta** and is not recommended for daily usage.
 
+### Migrating to Version 1.5.0
+The Version 1.5.0 changes the model from ```MacBookPro11,1``` to ```MacBookPro12,1```. You need to generate a new SMBIOS for the new model with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
+
 ### EFI folders
 There are different EFIs for different situations.
 
@@ -36,10 +39,10 @@ There are different EFIs for different situations.
 > **Note**: In order to use Heliport with macOS Monterey, apply every changes mentioned in ```DIFFERENCES.md``` in ```EFI - Monterey -> Config.plist```
 
 <a href="https://github.com/valnoxy/t440p-oc/blob/main/DIFFERENCES.md"><strong>
-Differences to the EFI folders »</strong></a>
-
-<a href="https://github.com/OpenIntelWireless/HeliPort/releases"><strong>
+Differences to the EFI folders »</strong></a> <br/> <a href="https://github.com/OpenIntelWireless/HeliPort/releases"><strong>
 Download HeliPort app »</strong></a>
+
+
 ### What works
 - Intel WiFi & Bluetooth (thanks to [itlwn](https://github.com/OpenIntelWireless/itlwm))
 - Brightness/Volume Control
@@ -72,7 +75,7 @@ You must have the following stuff:
 
 ## ⚙️ Preperation
 
->   **Note**: If you want to install macOS Monterey, you need to upgrade from Big Sur, or create an **offline** install media (see down below). Use the `config_beta.plist` for the installation.
+>   **Note**: If you want to install macOS Monterey, you need to upgrade from Big Sur, or create an **offline** install media (see down below).
 
 ### Creating the install media
 
@@ -121,16 +124,15 @@ The process is the following:
 - Download GenSMBIOS as a ZIP, then extract it.
 - Start GenSMBIOS.bat and use option 1 to download MacSerial.
 - Choose option 2, to select the path of the config.plist file. It will be located in EFI -> OC folder.
-- Choose option 3, and enter MacBookPro11,1 as the machine type.
->   **Note**: If you want to install macOS Monterey, type as machine type `MacBookPro12,1`
+- Choose option 3, and enter ```MacBookPro12,1``` as the machine type.
 - Press Q to quit. Your config now should contain the requied serials.
 
 #### Enter the proper ROM value
 After adding serials to your config.plist, you have to add the computer's MAC address to the config.plist file. **This step is also essential to have a working iMessage, so do not skip it.** We need a Plist editior, to write the MAC address into the config.plist file. I used [ProperTree](https://github.com/corpnewt/ProperTree), since it works on Windows too. You have to change the MAC address value in the config.plist at
 
-PlatformInfo -> Generic -> ROM
+```PlatformInfo -> Generic -> ROM```
 
-Delete the generic 112233445566 value, and enter your MAC address into the field, without any colons. Save the Plist file, and it is now ready to be written out to the EFI partition of your install media.
+Delete the generic ```112233445566``` value, and enter your MAC address into the field, without any colons. Save the Plist file, and it is now ready to be written out to the EFI partition of your install media.
 
 ### Install OpenCore
 After you've finished with the neccesary tweaks, you have to copy the EFI folder the EFI partition of your pendrive.
@@ -141,7 +143,6 @@ The bios must be properly configured prior to installing MacOS.
 In Security menu, set the following settings:
 
 
--  `Security > Security Chip`: must be **Disabled**
 -  `Memory Protection > Execution Prevention`: must be **Enabled**
 -  `Internal Device Access > Bottom Cover Tamper Detection`: must be **Disabled**
 -  `Anti-Theft > Current Setting`: must be **Disabled**
@@ -169,13 +170,13 @@ Now you can go through the install.
 
 ## 🚚 Post-Install
 ### Install EFI
-1. Press `ALT + SPACE` and open terminal. Type `sudo diskutil mountDisk disk0s1` (where disk0s1 corresponds to the EFI partition of the main disk)
+1. Press `WIN + SPACE` and open terminal. Type `sudo diskutil mountDisk disk0s1` (where disk0s1 corresponds to the EFI partition of the main disk)
 2. Open Finder and copy the EFI folder of your USB device to the main disk's EFI partition.
 3. Unplug the USB device and reboot your laptop. Now you can boot macOS without your USB device.
 
 ### Fix Audio Jack noise
 1. Copy `ALCPlugFix` to your desktop.
-2. Press `ALT + SPACE` and open terminal. Type the following commands: 
+2. Press `WIN + SPACE` and open terminal. Type the following commands: 
 ```bash
 sudo spctl --master-disable
 sudo mkdir /usr/local/bin/
@@ -191,9 +192,9 @@ To create a offline install media, you need the following stuff:
 - macOS Installer from the App Store.
 - A 16 GB pendrive (Keep in mind, during the preperation we will format the disk to create the install media).
 
-Press `ALT + SPACE` and open Disk utility. Select your USB device and click erase. Name it `MyUSB` and choose **Mac OS Extended** with **GUID Partition Map**. After erasing the USB device, close Disk utility.
+Press `WIN + SPACE` and open Disk utility. Select your USB device and click erase. Name it `MyUSB` and choose **Mac OS Extended** with **GUID Partition Map**. After erasing the USB device, close Disk utility.
 
-Now press `ALT + SPACE` and open terminal. Type the following command:
+Now press `WIN + SPACE` and open terminal. Type the following command:
 
 Big Sur:
 ```sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/MyUSB --downloadassets```
@@ -207,4 +208,4 @@ Monterey (Beta):
 After creating the install media, copy your EFI folder to the EFI partition of your USB device.
 
 ## ⭐️ Feedback
-Did you find any bugs or just have some questions? Feel free to provide your feedback using the Issues tab on GitHub or send me a mail to `hey@exploitox.de`.
+Did you find any bugs or just have some questions? Feel free to provide your feedback using the Issues tab.

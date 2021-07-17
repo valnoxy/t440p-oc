@@ -17,8 +17,6 @@
     + Config.plist
         + NVRAM
           - Uses more boot-args: ```-v -lilubeta -wegbeta -alcbeta```
-        + PlatformInfo
-          - Uses different model: ```MacBookPro12,1```
 ---
 - **EFI - Big Sur**
     + AirportItlwm.kext

@@ -35,7 +35,7 @@
       * [Install EFI](#install-efi)
       * [Fix Audio Jack noise](#fix-audio-jack-noise)
       * [Create a offline install media (Optional)](#create-a-offline-install-media-optional)
-   * [Upgrade macOS / Switch or update EFI](#-upgrade-macOS-switching-efi)
+   * [Upgrade macOS / Switch or update EFI](#%EF%B8%8F-upgrade-macos--switch-efi)
 
 ## 🔔 Information
 This guide is only for the Lenovo ThinkPad T440p.
@@ -84,7 +84,7 @@ Download HeliPort app »</strong></a>
 
 ### Known issues
 - **Intel Bluetooth**: When using WiFi, the audio gets stutters or choppy frequently. 
-  - Workaround: Use ```HeliPort``` instead.
+  - Workaround: Use ```HeliPort``` instead or disable WiFi.
 
 # 📖 Usage
 ## 📝 Requirements

@@ -232,6 +232,8 @@ After creating the install media, copy your EFI folder to the EFI partition of y
 ## ♻️ Upgrade macOS / Switch EFI
 If you plan to upgrade your macOS (or updating the EFI / switching to HeliPort), you'll need a different OpenCore configuation (EFI). Please follow these steps:
 
+> Note: Download the desired macOS version in the Settings before following these steps, if you are connected via WiFi.
+
 1. Download the newest release & [ProperTree](https://github.com/corpnewt/ProperTree) and extract it.
 2. Start ProperTree and load the ```Config.plist``` on your EFI partition. (File -> Open)
 > Note: You can mount your EFI partition by pressing ```WIN + SPACE```, typing Terminal and enter the following command: ```sudo diskutil mountDisk disk0s1```.
@@ -240,6 +242,8 @@ If you plan to upgrade your macOS (or updating the EFI / switching to HeliPort),
 5. Go in both windows to ```Root -> PlatformInfo -> Generic```. Transfer ```MLB, ROM, SystemProductName, SystemSerialNumber and SystemUUID``` to the new config. 
 6. Save the new config (File -> Save) and close both windows.
 7. Now delete your existing EFI folder from the EFI partition and copy the new one to it. (Make sure that the Directorys ```Boot and OC``` are in ```EFI```).
+
+If you want to upgrade macOS, download the desired macOS version in the Settings and perform the upgrade like on a real Mac.
 
 ## ⭐️ Feedback
 Did you find any bugs or just have some questions? Feel free to provide your feedback using the Issues tab.

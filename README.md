@@ -17,13 +17,33 @@
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
 
+## Table of contents
+
+   * [Information](#-information)
+      * [Migrate to Version 1.5.0](#migrate-to-version-150)
+      * [EFI folders](#efi-folders)
+      * [What works](#what-works)
+   * [Usage](#-usage)
+      * [Requirements](#-requirements)
+      * [Preperation](#%EF%B8%8F-preperation)
+        * [Create the install media](#create-the-install-media)
+        * [Configure and install OpenCore](#configure-and-install-opencore)
+   * [Installation](#-installation)
+      * [Prepare BIOS](#prepare-bios)
+      * [Install macOS](#install-macos)
+   * [Post-Install](#-post-install)
+      * [Install EFI](#install-efi)
+      * [Fix Audio Jack noise](#fix-audio-jack-noise)
+      * [Create a offline install media (Optional)](#create-a-offline-install-media-optional)
+   * [Upgrade macOS / Switch or update EFI](#-upgrade-macOS-switching-efi)
+
 ## 🔔 Information
 This guide is only for the Lenovo ThinkPad T440p.
 I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
 
 >   **Note**: This repo include support for macOS Monterey, but it is provided as **beta** and is not recommended for daily usage.
 
-### Migrating to Version 1.5.0
+### Migrate to Version 1.5.0
 The Version 1.5.0 changes the model from ```MacBookPro11,1``` to ```MacBookPro12,1```. You need to generate a new SMBIOS for the new model with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
 
 ### EFI folders
@@ -42,7 +62,6 @@ There are different EFIs for different situations.
 Differences to the EFI folders »</strong></a> <br/> <a href="https://github.com/OpenIntelWireless/HeliPort/releases"><strong>
 Download HeliPort app »</strong></a>
 
-
 ### What works
 - Intel WiFi & Bluetooth (thanks to [itlwn](https://github.com/OpenIntelWireless/itlwm))
 - Brightness/Volume Control
@@ -56,15 +75,18 @@ Download HeliPort app »</strong></a>
 - DisplayPort
 - Automatic OS updates
 - DVD Drive
-
-### Not tested yet
-- Dock USB ports
-- Dock HDMI, DisplayPort, DVI and VGA
+- Dock USB & Display
+- Handoff & Universal Clipboard
 
 ### Not working
+- AirDrop & Continuity
 - VGA
 
-# 📖 Installation Guide
+### Known issues
+- **Intel Bluetooth**: When using WiFi, the audio gets stutters or choppy frequently. 
+  - Workaround: Use ```HeliPort``` instead.
+
+# 📖 Usage
 ## 📝 Requirements
 You must have the following stuff:
 - Lenovo ThinkPad T440p (Obviously 😁).
@@ -77,7 +99,7 @@ You must have the following stuff:
 
 >   **Note**: If you want to install macOS Monterey, you need to upgrade from Big Sur, or create an **offline** install media (see down below).
 
-### Creating the install media
+### Create the install media
 
 First of all, you will need the install media of macOS. I will use [macrecovery](https://github.com/acidanthera/OpenCorePkg) to download and create the macOS Install media.
 
@@ -113,8 +135,8 @@ python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download
 
 After the install media was created, we need to make the USB drive bootable.
 
-### Configuring and installing OpenCore
-Download the EFI folder from this repo, you will find the latest files under the releases or just download the repo as it is. Move the EFI folder to the root of your pendrive (e.g. J:\).
+### Configure and install OpenCore
+Download the EFI folder from this repo, you will find the latest files under the release tab or just download the repo as it is. Move the folder to the root of your pendrive (e.g. J:\) and rename the folder to ```EFI```.
 
 #### GenSMBIOS
 We need a script, called [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS), to create fake serial number, UUID and MLB numbers. **This step is essential to have working iMessage, so do not skip it!**
@@ -185,7 +207,7 @@ cd Desktop/ALCPlugFix
 ```
 3. After that, type `hda-verb 0x1a SET_PIN_WIDGET_CONTROL 0x24`.
 
-## (Optional) Creating a offline install media
+### Create a offline install media (Optional)
 In case of reinstalling macOS, a offline install media can save some time. You also don't need an Ethernet connection for the installation.
 To create a offline install media, you need the following stuff: 
 
@@ -206,6 +228,18 @@ Monterey (Beta):
 ```sudo /Applications/Install\ macOS\ 12\ Beta.app/Contents/Resources/createinstallmedia --volume /Volumes/MyUSB --downloadassets```
 
 After creating the install media, copy your EFI folder to the EFI partition of your USB device.
+
+## ♻️ Upgrade macOS / Switch EFI
+If you plan to upgrade your macOS (or updating the EFI / switching to HeliPort), you'll need a different OpenCore configuation (EFI). Please follow these steps:
+
+1. Download the newest release & [ProperTree](https://github.com/corpnewt/ProperTree) and extract it.
+2. Start ProperTree and load the ```Config.plist``` on your EFI partition. (File -> Open)
+> Note: You can mount your EFI partition by pressing ```WIN + SPACE```, typing Terminal and enter the following command: ```sudo diskutil mountDisk disk0s1```.
+3. Now also load the new configuration file from the repo for the desired macOS installation (or HeliPort config). 
+4. You should now have 2 ProperTree-windows open on your screen.
+5. Go in both windows to ```Root -> PlatformInfo -> Generic```. Transfer ```MLB, ROM, SystemProductName, SystemSerialNumber and SystemUUID``` to the new config. 
+6. Save the new config (File -> Save) and close both windows.
+7. Now delete your existing EFI folder from the EFI partition and copy the new one to it. (Make sure that the Directorys ```Boot and OC``` are in ```EFI```).
 
 ## ⭐️ Feedback
 Did you find any bugs or just have some questions? Feel free to provide your feedback using the Issues tab.

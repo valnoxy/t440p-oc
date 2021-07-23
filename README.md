@@ -85,6 +85,8 @@ Download HeliPort app »</strong></a>
 ### Known issues
 - **Intel Bluetooth**: When using WiFi, the audio gets stutters or choppy frequently. 
   - Workaround: Use ```HeliPort``` instead or disable WiFi.
+- **Microphone**: Internal microphone is not recognized.
+- **Sleep / Wakeup**: The device may not wake up after sleeping.
 
 # 📖 Usage
 ## 📝 Requirements
@@ -96,7 +98,6 @@ You must have the following stuff:
 - 1-2 hours of your time.
 
 ## ⚙️ Preperation
-
 >   **Note**: If you want to install macOS Monterey, you need to upgrade from Big Sur, or create an **offline** install media (see down below).
 
 ### Create the install media

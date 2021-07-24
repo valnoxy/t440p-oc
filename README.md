@@ -88,8 +88,6 @@ Download HeliPort app »</strong></a>
 ### Known issues
 - **Intel Bluetooth**: When using WiFi, the audio gets stutters or choppy frequently. 
   - Workaround: Use ```HeliPort``` instead or disable WiFi.
-- **Microphone**: Internal microphone is not recognized.
-- **Sleep / Wakeup**: The device may not wake up after sleeping.
 
 # 📖 Usage
 ## 📝 Requirements

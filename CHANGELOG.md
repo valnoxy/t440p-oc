@@ -9,6 +9,12 @@
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
 
+### Version 1.5.1 (25.07.2021)
+- Update Bluetooth kexts
+- Add YogaSMC for better 
+- Support Sidecar and AirPlay for Mac
+- Fix Audio & Microphone
+
 ### Version 1.5.0 (17.07.2021)
 - Update OpenCore to 0.7.1
 - Update USBPort.kext
@@ -33,7 +39,7 @@
 - Add UltrabayHDD support
 - Add Intel Bluetooth kext
 - Add AppleALC kext
-- Removed VoodooHDA kext
+- Remove VoodooHDA kext
 
 ### Version 1.1.0 (21.04.2021)
 - Add new Theme [BsxDarkFencePinkPurple1](https://github.com/blackosx/BsxDarkFencePinkPurple1_) (you can enable it by changing the value of ```PickerVariant``` to ```BsxDarkFencePinkPurple1_```)

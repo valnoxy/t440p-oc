@@ -2,7 +2,7 @@
 
 <h3 align="center">Lenovo ThinkPad T440p - OpenCore Configuation</h3>
 <p align="center">
-    <strong>Version: </strong>1.5.0
+    <strong>Version: </strong>1.5.1
     <br />
     <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
     <br />
@@ -37,6 +37,8 @@
       * [Create a offline install media (Optional)](#create-a-offline-install-media-optional)
    * [Upgrade macOS / Switch or update EFI](#%EF%B8%8F-upgrade-macos--switch-efi)
 
+> Note: See the wiki for more tweaks etc.
+
 ## 🔔 Information
 This guide is only for the Lenovo ThinkPad T440p.
 I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
@@ -64,19 +66,20 @@ Download HeliPort app »</strong></a>
 
 ### What works
 - Intel WiFi & Bluetooth (thanks to [itlwn](https://github.com/OpenIntelWireless/itlwm))
-- Brightness/Volume Control
+- Brightness / Volume Control
 - Battery Information
 - Audio (Audio Jack & Speaker)
-- USB Ports, Built-in Camera
+- USB Ports & Built-in Camera
 - Graphics Acceleration
-- Trackpoint/Touchpad
-- Power management/sleep
-- FaceTime/iMessage
+- Trackpoint / Touchpad
+- Power management / Sleep
+- FaceTime / iMessage (iServices)
 - DisplayPort
 - Automatic OS updates
 - DVD Drive
-- Dock USB & Display
-- Handoff & Universal Clipboard
+- Dock USB / Display
+- Handoff / Universal Clipboard
+- Sidecar / AirPlay to Mac
 
 ### Not working
 - AirDrop & Continuity

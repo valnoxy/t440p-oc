@@ -166,7 +166,7 @@ After you've finished with the neccesary tweaks, you have to copy the EFI folder
 The bios must be properly configured prior to installing MacOS.
 In Security menu, set the following settings:
 
-
+-  `Security > Security Chip`: must be **Disabled**
 -  `Memory Protection > Execution Prevention`: must be **Enabled**
 -  `Internal Device Access > Bottom Cover Tamper Detection`: must be **Disabled**
 -  `Anti-Theft > Current Setting`: must be **Disabled**

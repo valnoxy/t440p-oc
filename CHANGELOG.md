@@ -11,7 +11,7 @@
 
 ### Version 1.5.1 (25.07.2021)
 - Update Bluetooth kexts
-- Add YogaSMC for better 
+- Add YogaSMC
 - Support Sidecar and AirPlay for Mac
 - Fix Audio & Microphone
 

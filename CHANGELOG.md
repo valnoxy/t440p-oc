@@ -9,6 +9,17 @@
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
 
+### Version 1.5.2 (15.08.2021)
+- Update Airportitlwm / itlwm to ```2.0.0```
+- Update AppleALC to ```1.6.3```
+- Update FeatureUnlock to ```1.0.3```
+- Update IntelBluetooth to ```2.0.0```
+- Update VirtualSMC to ```1.2.6```
+- Update WhateverGreen to ```1.5.2```
+- Remove Tools
+- Remove SSDT-BAT (YogaSMC should work now)
+
+
 ### Version 1.5.1 (25.07.2021)
 - Update Bluetooth kexts
 - Add YogaSMC

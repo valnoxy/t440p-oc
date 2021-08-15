@@ -2,7 +2,7 @@
 
 <h3 align="center">Lenovo ThinkPad T440p - OpenCore Configuation</h3>
 <p align="center">
-    <strong>Version: </strong>1.5.1
+    <strong>Version: </strong>1.5.2
     <br />
     <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
     <br />

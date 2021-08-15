@@ -13,7 +13,7 @@
 
 - **EFI - Monterey**
     + AirportItlwm.kext
-        - Version for Big Sur
+        - Kext supports only Monterey
     + Config.plist
         + NVRAM
           - Uses more boot-args: ```-v -lilubeta -wegbeta -alcbeta```
@@ -33,4 +33,4 @@
         - Kext supports every macOS Version
         - Require Heliport app in order to use WiFi
 
-> **Note**: In order to use Heliport with macOS Monterey, apply every changes mentioned above in ```EFI - Monterey -> Config.plist```
+> **Note**: In order to use Heliport with macOS Monterey, apply every changes  mentioned above in ```EFI - Monterey -> OC -> Config.plist```.

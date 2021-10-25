@@ -1,28 +1,43 @@
-﻿![macOS Big Sur running on the T440p](https://dl.exploitox.de/t440p-oc/Hackintosh_T440p_V3.png)
+﻿<img align="left" src="https://dl.exploitox.de/t440p-oc/Hackintosh_T440p_V4.jpg" alt="macOS Monterey running on the T440p" width="430">
 
 <h3 align="center">Lenovo ThinkPad T440p - OpenCore Configuation</h3>
 <p align="center">
-    <strong>Version: </strong>1.5.2
-    <br />
-    <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/valnoxy/t440p-oc/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/valnoxy/t440p-oc/blob/main/CHANGELOG.md">View Changelog</a>
-    ·
-    <a href="https://www.youtube.com/watch?v=6Uz63UQiApQ">YouTube Video</a>
+   <strong>Status: Maintained</strong>
+   <br />
+   <strong>Version: </strong>1.6.0
+   <br />
+   <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
+   <br />
+   <br />
+   <a href="https://github.com/valnoxy/t440p-oc/issues">Report Bug</a>
+   ·
+   <a href="https://github.com/valnoxy/t440p-oc/blob/main/CHANGELOG.md">View Changelog</a>
+   ·
+   <a href="https://www.youtube.com/watch?v=6Uz63UQiApQ">YouTube Video</a>
   </p>
 </p>
 
+<br />
+
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+![macOS-Stable](https://img.shields.io/badge/macOS-Monterey-brightgreen.svg)
+![macOS-Stable](https://img.shields.io/badge/macOS-BigSur-brightgreen.svg)
+![macOS-Stable](https://img.shields.io/badge/macOS-Catalina-brightgreen.svg)
+
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
 
-## Table of contents
+## ⚠️ Disclaimer
+This guide is only for the Lenovo ThinkPad T440p. I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
 
-   * [Information](#-information)
+## ℹ️ Information
+<details> 
+<summary><strong>Table of contents</strong></summary>
+
+   * [Introduction](#-introduction)
+      * [Installing macOS Monterey](#installing-macos-monterey)
       * [Migrate to Version 1.5.0](#migrate-to-version-150)
       * [EFI folders](#efi-folders)
-      * [What works](#what-works)
+   * [Features](#-features)
    * [Usage](#-usage)
       * [Requirements](#-requirements)
       * [Preperation](#%EF%B8%8F-preperation)
@@ -38,32 +53,50 @@
    * [Upgrade macOS / Switch or update EFI](#%EF%B8%8F-upgrade-macos--switch-efi)
 
 > Note: See the wiki for more tweaks etc.
+</details> 
+<details>
+<summary><strong>Hardware</strong></summary>
+<br>
 
-## 🔔 Information
-This guide is only for the Lenovo ThinkPad T440p.
-I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
+These are the Hardware component I use. But this OpenCore configuation **should still work** with your device, even if the components are not equal.
 
->   **Note**: This repo include support for macOS Monterey, but it is provided as **beta** and is not recommended for daily usage.
+| Category  | Component                            |
+| --------- | ------------------------------------ |
+| CPU       | Intel Core i7-4800MQ                 |
+| GPU       | Intel HD Graphics 4600               |
+| SSD       | SanDisk SSD PLUS 480GB               |
+| Memory    | 8GB DDR3 1600Mhz                     |
+| Camera    | 720p Camera                          |
+| WiFi & BT | Intel Wireless-N 7260                |
+
+</details>  
+
+## 🔔 Introduction
+---
+### Installing macOS Monterey
+
+At this moment, there are no recovery images for macOS Monterey. So if you plan to install macOS Monterey on your device, please install macOS Big Sur first and upgrade to macOS Monterey within Settings -> System Update.
 
 ### Migrate to Version 1.5.0
 The Version 1.5.0 changes the model from ```MacBookPro11,1``` to ```MacBookPro12,1```. You need to generate a new SMBIOS for the new model with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
 
 ### EFI folders
-There are different EFIs for different situations.
+This repo includes multiple EFI configuations for different macOS Versions.
 
 | EFI               | Description                                              | Type      |
 | ----------------- | -------------------------------------------------------- | --------- |
-| `EFI - Catalina`  | Supports only macOS Catalina                             | `Release` |
-| `EFI - Big Sur`   | Supports only macOS Big Sur                              | `Release` |
-| `EFI - Monterey`  | Supports only macOS Monterey                             | `Beta`    |
-| `EFI - HeliPort`  | Supports every macOS Version, Require HeliPort app       | `Release` |
+| `EFI - Catalina`  | Supports only macOS Catalina                             | `Stable`  |
+| `EFI - Big Sur`   | Supports only macOS Big Sur                              | `Stable`  |
+| `EFI - Monterey`  | Supports only macOS Monterey                             | `Stable`  |
+| `EFI - HeliPort`  | Supports every macOS Version, Require HeliPort app       | `Stable`  |
 
-> **Note**: In order to use Heliport with macOS Monterey, apply every changes mentioned in ```DIFFERENCES.md``` in ```EFI - Monterey -> Config.plist```
 
 <a href="https://github.com/valnoxy/t440p-oc/blob/main/DIFFERENCES.md"><strong>
 Differences to the EFI folders »</strong></a> <br/> <a href="https://github.com/OpenIntelWireless/HeliPort/releases"><strong>
 Download HeliPort app »</strong></a>
 
+## ✨ Features
+---
 ### What works
 - Intel WiFi & Bluetooth (thanks to [itlwn](https://github.com/OpenIntelWireless/itlwm))
 - Brightness / Volume Control
@@ -86,10 +119,15 @@ Download HeliPort app »</strong></a>
 - VGA
 
 ### Known issues
-- **Intel Bluetooth**: When using WiFi, the audio gets stutters or choppy frequently. 
-  - Workaround: Use ```HeliPort``` instead or disable WiFi.
+- **Intel Bluetooth**: When using WiFi, the audio gets stutters or choppy frequently. (AirPods mainly affected)
+   - Workaround: Use ```Ethernet``` instead of WiFI.
+- **CPU Temperature**: The device might have some heat issues.
+   - Workaround: Install ```YogaSMC``` app.
+- **DRM**: Safari can't play DRM-protected media. (ex. Netflix)
+   - Workaround: Use ```Firefox``` or ```Chrome```.
 
 # 📖 Usage
+---
 ## 📝 Requirements
 You must have the following stuff:
 - Lenovo ThinkPad T440p (Obviously 😁).
@@ -99,6 +137,7 @@ You must have the following stuff:
 - 1-2 hours of your time.
 
 ## ⚙️ Preperation
+---
 >   **Note**: If you want to install macOS Monterey, you need to upgrade from Big Sur, or create an **offline** install media (see down below).
 
 ### Create the install media
@@ -116,6 +155,9 @@ python macrecovery.py -b Mac-00BE6ED71E35EB86 -m 00000000000000000 download
 
 # Big Sur (11)
 python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download
+
+# Monterey (12)
+<Coming soon>
 ```
 - After the download succeeded, type ```diskpart``` and wait until you see ```DISKPART>```
 
@@ -158,12 +200,16 @@ After adding serials to your config.plist, you have to add the computer's MAC ad
 
 Delete the generic ```112233445566``` value, and enter your MAC address into the field, without any colons. Save the Plist file, and it is now ready to be written out to the EFI partition of your install media.
 
+#### Default keyboard layout and language
+The default keyboard layout and language is ```German```. To change the language, edit the value of ```NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> prev-lang:kbd``` to the value of your language. You can find a list of all language values [here](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt).
+
 ### Install OpenCore
-After you've finished with the neccesary tweaks, you have to copy the EFI folder the EFI partition of your pendrive.
+After you've finished with the neccesary tweaks, you have to copy the EFI folder to the EFI partition of your pendrive.
 
 ## 🚚 Installation
+---
 ### Prepare BIOS
-The bios must be properly configured prior to installing MacOS.
+The bios must be properly configured prior to installing macOS.
 In Security menu, set the following settings:
 
 -  `Security > Security Chip`: must be **Disabled**
@@ -193,6 +239,7 @@ Now you can go through the install.
 6. Create your user accound and everything else.
 
 ## 🚚 Post-Install
+---
 ### Install EFI
 1. Press `WIN + SPACE` and open terminal. Type `sudo diskutil mountDisk disk0s1` (where disk0s1 corresponds to the EFI partition of the main disk)
 2. Open Finder and copy the EFI folder of your USB device to the main disk's EFI partition.
@@ -210,6 +257,7 @@ cd Desktop/ALCPlugFix
 3. After that, type `hda-verb 0x1a SET_PIN_WIDGET_CONTROL 0x24`.
 
 ### Create a offline install media (Optional)
+
 In case of reinstalling macOS, a offline install media can save some time. You also don't need an Ethernet connection for the installation.
 To create a offline install media, you need the following stuff: 
 
@@ -226,12 +274,13 @@ Big Sur:
 Catalina:
 ```sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyUSB --downloadassets```
 
-Monterey (Beta):
-```sudo /Applications/Install\ macOS\ 12\ Beta.app/Contents/Resources/createinstallmedia --volume /Volumes/MyUSB --downloadassets```
+Monterey:
+```sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/MyUSB --downloadassets```
 
 After creating the install media, copy your EFI folder to the EFI partition of your USB device.
 
 ## ♻️ Upgrade macOS / Switch EFI
+---
 If you plan to upgrade your macOS (or updating the EFI / switching to HeliPort), you'll need a different OpenCore configuation (EFI). Please follow these steps:
 
 > Note: Download the desired macOS version in the Settings before following these steps, if you are connected via WiFi.
@@ -245,7 +294,25 @@ If you plan to upgrade your macOS (or updating the EFI / switching to HeliPort),
 6. Save the new config (File -> Save) and close both windows.
 7. Now delete your existing EFI folder from the EFI partition and copy the new one to it. (Make sure that the Directorys ```Boot and OC``` are in ```EFI```).
 
-If you want to upgrade macOS, download the desired macOS version in the Settings and perform the upgrade like on a real Mac.
+If you want to upgrade macOS, download the desired macOS version in the Settings app and perform the upgrade like on a real Mac.
 
 ## ⭐️ Feedback
+---
 Did you find any bugs or just have some questions? Feel free to provide your feedback using the Issues tab.
+
+## 📜 License
+---
+This repo is licensed under the [MIT License](https://github.com/acidanthera/OpenCorePkg/blob/master/LICENSE.txt).
+
+The following files are licensed under the [MIT License](https://github.com/acidanthera/OpenCorePkg/blob/master/LICENSE.txt):
+- SSDT-PLUG ```(source code included)```
+- SSDT-PNLF ```(source code included)```
+- SSDT-GPI0 ```(source code included)```
+- USBMap.kext (USB Mapping for MacBookPro12,1)
+
+OpenCore is licensed under the [BSD 3-Clause License](https://github.com/acidanthera/OpenCorePkg/blob/master/LICENSE.txt).
+
+You can feely use these files for your projects, but please mention me.
+
+------
+```Copyright (c) 2018 - 2021 valnoxy. By Jonas G. <jonas@exploitox.de>```

@@ -1,4 +1,4 @@
-![macOS Big Sur running on the T440p](https://dl.exploitox.de/t440p-oc/Hackintosh_T440p_V3.png)
+![macOS Monterey running on the T440p](https://dl.exploitox.de/t440p-oc/Hackintosh_T440p_V4.jpg)
 
 <h3 align="center">Lenovo ThinkPad T440p - OpenCore Configuation</h3>
 <p align="center">
@@ -8,6 +8,22 @@
 </p>
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
+
+### Version 1.6.0 (25.10.2021)
+- OpenCore to ```0.7.4```
+- SSDT Changes
+  - New / Updated 
+    - SSDT-PLUG ```(source code included)```
+    - SSDT-PNLF ```(source code included)```
+    - SSDT-GPI0 ```(source code included)```
+- Kext Changes
+  - New / Updated
+    - AppleALC to ```1.6.5```
+    - CpuTscSync (new - syncing TSC, can improve performance)
+    - HibernationFix (new)
+    - Lilu to ```1.5.6```
+    - VirtualSMC to ```1.2.7```
+    - WhateverGreen to ```1.5.4```
 
 ### Version 1.5.2 (15.08.2021)
 - Update Airportitlwm / itlwm to ```2.0.0```
@@ -19,7 +35,6 @@
 - Remove Tools
 - Remove SSDT-BAT (YogaSMC should work now)
 
-
 ### Version 1.5.1 (25.07.2021)
 - Update Bluetooth kexts
 - Add YogaSMC
@@ -27,7 +42,7 @@
 - Fix Audio & Microphone
 
 ### Version 1.5.0 (17.07.2021)
-- Update OpenCore to 0.7.1
+- Update OpenCore to ```0.7.1```
 - Update USBPort.kext
 - Change model to ```MacBookPro12,1```
 - Add Tool (TpmInfo.efi)

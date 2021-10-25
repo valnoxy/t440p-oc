@@ -1,4 +1,4 @@
-![macOS Big Sur running on the T440p](https://dl.exploitox.de/t440p-oc/Hackintosh_T440p_V3.png)
+![macOS Monterey running on the T440p](https://dl.exploitox.de/t440p-oc/Hackintosh_T440p_V4.jpg)
 
 <h3 align="center">Lenovo ThinkPad T440p - OpenCore Configuation</h3>
 <p align="center">
@@ -14,9 +14,6 @@
 - **EFI - Monterey**
     + AirportItlwm.kext
         - Kext supports only Monterey
-    + Config.plist
-        + NVRAM
-          - Uses more boot-args: ```-v -lilubeta -wegbeta -alcbeta```
 ---
 - **EFI - Big Sur**
     + AirportItlwm.kext
@@ -32,5 +29,3 @@
     + Itlwm.kext
         - Kext supports every macOS Version
         - Require Heliport app in order to use WiFi
-
-> **Note**: In order to use Heliport with macOS Monterey, apply every changes  mentioned above in ```EFI - Monterey -> OC -> Config.plist```.

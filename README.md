@@ -302,9 +302,9 @@ Did you find any bugs or just have some questions? Feel free to provide your fee
 
 ## 📜 License
 ---
-This repo is licensed under the [MIT License](https://github.com/acidanthera/OpenCorePkg/blob/master/LICENSE.txt).
+This repo is licensed under the [MIT License](https://github.com/valnoxy/t440p-oc/blob/main/LICENSE).
 
-The following files are licensed under the [MIT License](https://github.com/acidanthera/OpenCorePkg/blob/master/LICENSE.txt):
+The following files are licensed under the [MIT License](https://github.com/valnoxy/t440p-oc/blob/main/LICENSE):
 - SSDT-PLUG ```(source code included)```
 - SSDT-PNLF ```(source code included)```
 - SSDT-GPI0 ```(source code included)```
@@ -314,5 +314,5 @@ OpenCore is licensed under the [BSD 3-Clause License](https://github.com/acidant
 
 You can feely use these files for your projects, but please mention me.
 
-------
+---
 ```Copyright (c) 2018 - 2021 valnoxy. By Jonas G. <jonas@exploitox.de>```

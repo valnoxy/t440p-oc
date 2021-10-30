@@ -34,7 +34,6 @@ This guide is only for the Lenovo ThinkPad T440p. I am NOT responsible for any h
 <summary><strong>Table of contents</strong></summary>
 
    * [Introduction](#-introduction)
-      * [Installing macOS Monterey](#installing-macos-monterey)
       * [Migrate to Version 1.5.0](#migrate-to-version-150)
       * [EFI folders](#efi-folders)
    * [Features](#-features)
@@ -73,9 +72,6 @@ These are the Hardware component I use. But this OpenCore configuation **should 
 
 ## 🔔 Introduction
 ---
-### Installing macOS Monterey
-
-At this moment, there are no recovery images for macOS Monterey. So if you plan to install macOS Monterey on your device, please install macOS Big Sur first and upgrade to macOS Monterey within Settings -> System Update.
 
 ### Migrate to Version 1.5.0
 The Version 1.5.0 changes the model from ```MacBookPro11,1``` to ```MacBookPro12,1```. You need to generate a new SMBIOS for the new model with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
@@ -154,10 +150,10 @@ With macrecovery, the process is the following:
 python macrecovery.py -b Mac-00BE6ED71E35EB86 -m 00000000000000000 download
 
 # Big Sur (11)
-python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download
+python macrecovery.py -b Mac-42FD25EABCABB274 -m 00000000000000000 download
 
 # Monterey (12)
-<Coming soon>
+python ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download
 ```
 - After the download succeeded, type ```diskpart``` and wait until you see ```DISKPART>```
 

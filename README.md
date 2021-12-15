@@ -4,7 +4,9 @@
 <p align="center">
    <strong>Status: Maintained</strong>
    <br />
-   <strong>Version: </strong>1.6.0
+   <strong>Version: </strong>1.7.0-dev
+   <br />
+   <strong>Note: </strong>Not for production system!
    <br />
    <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
    <br />
@@ -26,6 +28,11 @@
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
 
+## ⚠️ Before continuing 
+This is the develop branch. These configurations should not be used on a production system. 
+
+I will push the first commits for ```Version 1.7.0``` in the next few days. These will fix some issues.
+
 ## ⚠️ Disclaimer
 This guide is only for the Lenovo ThinkPad T440p. I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
 
@@ -34,7 +41,7 @@ This guide is only for the Lenovo ThinkPad T440p. I am NOT responsible for any h
 <summary><strong>Table of contents</strong></summary>
 
    * [Introduction](#-introduction)
-      * [Migrate to Version 1.5.0](#migrate-to-version-150)
+      * [Migrate to Version 1.7.0](#migrate-to-version-170)
       * [EFI folders](#efi-folders)
    * [Features](#-features)
    * [Usage](#-usage)
@@ -73,8 +80,8 @@ These are the Hardware component I use. But this OpenCore configuation **should 
 ## 🔔 Introduction
 ---
 
-### Migrate to Version 1.5.0
-The Version 1.5.0 changes the model from ```MacBookPro11,1``` to ```MacBookPro12,1```. You need to generate a new SMBIOS for the new model with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
+### Migrate to Version 1.7.0
+The Version 1.7.0 changes the model from ```MacBookPro12,1``` to ```MacBookPro11,4```. You need to generate a new SMBIOS for the new model with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
 
 ### EFI folders
 This repo includes multiple EFI configuations for different macOS Versions.
@@ -304,7 +311,7 @@ The following files are licensed under the [MIT License](https://github.com/valn
 - SSDT-PLUG ```(source code included)```
 - SSDT-PNLF ```(source code included)```
 - SSDT-GPI0 ```(source code included)```
-- USBMap.kext (USB Mapping for MacBookPro12,1)
+- USBMap.kext (USB Mapping for MacBookPro11,4)
 
 OpenCore is licensed under the [BSD 3-Clause License](https://github.com/acidanthera/OpenCorePkg/blob/master/LICENSE.txt).
 

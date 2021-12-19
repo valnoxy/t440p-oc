@@ -318,4 +318,4 @@ OpenCore is licensed under the [BSD 3-Clause License](https://github.com/acidant
 You can feely use these files for your projects, but please mention me.
 
 ---
-```Copyright (c) 2018 - 2021 valnoxy. By Jonas G. <jonas@exploitox.de>```
+```Copyright (c) 2018 - 2022 valnoxy. By Jonas G. <jonas@exploitox.de>```

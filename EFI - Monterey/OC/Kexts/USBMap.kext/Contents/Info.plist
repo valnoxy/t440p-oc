@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleGetInfoString</key>
-	<string>v1.0 Copyright © 2018 - 2021 valnoxy. All rights reserved.</string>
+	<string>v1.1 Copyright © 2018 - 2022 valnoxy. All rights reserved.</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.valnoxy.USBMap</string>
+	<string>dev.valnoxy.USBMap</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -22,7 +22,7 @@
 	<string>1.0</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>MacBookPro12,1-XHCI</key>
+		<key>MacBookPro11,4-XHCI</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
@@ -164,7 +164,7 @@
 				</dict>
 			</dict>
 			<key>model</key>
-			<string>MacBookPro12,1</string>
+			<string>MacBookPro11,4</string>
 		</dict>
 	</dict>
 	<key>OSBundleRequired</key>

@@ -78,7 +78,7 @@ These are the Hardware component I use. But this OpenCore configuation **should 
 </details>  
 
 ## 🔔 Introduction
----
+
 
 ### Migrate to Version 1.7.0
 The Version 1.7.0 changes the model from ```MacBookPro12,1``` to ```MacBookPro11,4```. You need to generate a new SMBIOS for the new model with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
@@ -99,7 +99,7 @@ Differences to the EFI folders »</strong></a> <br/> <a href="https://github.com
 Download HeliPort app »</strong></a>
 
 ## ✨ Features
----
+
 ### What works
 - Intel WiFi & Bluetooth (thanks to [itlwn](https://github.com/OpenIntelWireless/itlwm))
 - Brightness / Volume Control
@@ -130,7 +130,7 @@ Download HeliPort app »</strong></a>
    - Workaround: Use ```Firefox``` or ```Chrome```.
 
 # 📖 Usage
----
+
 ## 📝 Requirements
 You must have the following stuff:
 - Lenovo ThinkPad T440p (Obviously 😁).
@@ -140,7 +140,7 @@ You must have the following stuff:
 - 1-2 hours of your time.
 
 ## ⚙️ Preperation
----
+
 >   **Note**: If you want to install macOS Monterey, you need to upgrade from Big Sur, or create an **offline** install media (see down below).
 
 ### Create the install media
@@ -210,7 +210,7 @@ The default keyboard layout and language is ```German```. To change the language
 After you've finished with the neccesary tweaks, you have to copy the EFI folder to the EFI partition of your pendrive.
 
 ## 🚚 Installation
----
+
 ### Prepare BIOS
 The bios must be properly configured prior to installing macOS.
 In Security menu, set the following settings:
@@ -242,7 +242,7 @@ Now you can go through the install.
 6. Create your user accound and everything else.
 
 ## 🚚 Post-Install
----
+
 ### Install EFI
 1. Press `WIN + SPACE` and open terminal. Type `sudo diskutil mountDisk disk0s1` (where disk0s1 corresponds to the EFI partition of the main disk)
 2. Open Finder and copy the EFI folder of your USB device to the main disk's EFI partition.
@@ -283,7 +283,7 @@ Monterey:
 After creating the install media, copy your EFI folder to the EFI partition of your USB device.
 
 ## ♻️ Upgrade macOS / Switch EFI
----
+
 If you plan to upgrade your macOS (or updating the EFI / switching to HeliPort), you'll need a different OpenCore configuation (EFI). Please follow these steps:
 
 > Note: Download the desired macOS version in the Settings before following these steps, if you are connected via WiFi.
@@ -300,11 +300,11 @@ If you plan to upgrade your macOS (or updating the EFI / switching to HeliPort),
 If you want to upgrade macOS, download the desired macOS version in the Settings app and perform the upgrade like on a real Mac.
 
 ## ⭐️ Feedback
----
+
 Did you find any bugs or just have some questions? Feel free to provide your feedback using the Issues tab.
 
 ## 📜 License
----
+
 This repo is licensed under the [MIT License](https://github.com/valnoxy/t440p-oc/blob/main/LICENSE).
 
 The following files are licensed under the [MIT License](https://github.com/valnoxy/t440p-oc/blob/main/LICENSE):

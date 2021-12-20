@@ -9,6 +9,20 @@
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
 
+### Version 1.7.0-dev (Last update: 20.12.2021)
+- Kext Changes
+  - New / Updated
+    - AppleALC to ```1.6.7```
+    - HibernationFixup to ```1.4.5```
+    - Lilu to ```1.5.8```
+    - VirtualSMC to ```1.2.8```
+    - WhateverGreen to ```1.5.5```
+    - Added RealtekCardReader
+    - Added RealtekCardReaderFriend.kext
+    - USBMap to ```1.0.1```
+- Config Changes
+  - New Model: ```MacBookPro12,1``` to ```MacBookPro11,4```
+
 ### Version 1.6.0 (25.10.2021)
 - OpenCore to ```0.7.4```
 - SSDT Changes

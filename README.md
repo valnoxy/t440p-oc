@@ -301,7 +301,7 @@ If you want to upgrade macOS, download the desired macOS version in the Settings
 
 ## ⭐️ Feedback
 
-Did you find any bugs or just have some questions? Feel free to provide your feedback using the Issues tab.
+Did you find any bugs or just have some questions? Feel free to provide your feedback using the Discussions tab.
 
 ## 📜 License
 

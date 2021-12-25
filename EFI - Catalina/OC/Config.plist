@@ -2,15 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>#WARNING - 1</key>
-	<string>This is a debug release. Do not load it on a production system!</string>
 	<key>ACPI</key>
 	<dict>
 		<key>Add</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Power Resources for Wake</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -18,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Fake ambient light sensor</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -26,7 +24,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Battery driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -34,7 +32,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Disable EHCI controller</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -42,7 +40,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>ACPI driver for OEM hardware (YogaSMC)</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -58,7 +56,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Brightness patch</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -66,7 +64,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>LED and Power Button blink patch</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -74,7 +72,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>AppleSMBus Fix</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -82,7 +80,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Plugin type</string>
+				<string>Plugin type to 1 for CPU0/PR00</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -98,7 +96,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Power button</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -106,11 +104,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Injects missing DVL0 device</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-SMBUS.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ThinkVPC (YogaSMC)</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-THINK.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>

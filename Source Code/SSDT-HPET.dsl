@@ -1,10 +1,11 @@
-//
-// Supplementary HPET _CRS from Goldfish64
-// Requires the HPET's _CRS to XCRS rename
-//
-// Modified by valnoxy
-// Designed for T440p -> https://github.com/valnoxy/t440p-oc
-//
+/*
+ * Supplementary HPET _CRS from Goldfish64
+ * Requires the HPET's _CRS to XCRS rename
+ *
+ * Designed for T440p -> See https://github.com/valnoxy/t440p-oc
+ */
+
+
 DefinitionBlock ("", "SSDT", 2, "CORP", "HPET", 0x00000000)
 {
     External (\_SB.PCI0.LPC, DeviceObj)    // (from opcode)

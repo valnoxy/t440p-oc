@@ -306,10 +306,21 @@ Did you find any bugs or just have some questions? Feel free to provide your fee
 This repo is licensed under the [MIT License](https://github.com/valnoxy/t440p-oc/blob/main/LICENSE).
 
 The following files are licensed under the [MIT License](https://github.com/valnoxy/t440p-oc/blob/main/LICENSE):
-- SSDT-HPET ```(source code included)```
-- SSDT-PLUG ```(source code included)```
-- SSDT-PNLF ```(source code included)```
-- USBMap.kext (USB Mapping for MacBookPro11,4)
+- SSDT-ADPT ```(Power Resources for Wake)```
+- SSDT-ALS0 ```(Fake ambient light sensor)```
+- SSDT-BATX ```(Battery driver)```
+- SSDT-DEHCI ```(Disable EHCI controller)```
+- SSDT-ECRW ```(ACPI driver for OEM hardware (YogaSMC))```
+- SSDT-HPET ```(IRQ Conflicts fix (Needs _CRS to XCRS Rename))```
+- SSDT-KBD ```(Brightness patch)```
+- SSDT-LED ```(LED and Power Button blink patch)```
+- SSDT-MCHC ```(AppleSMBus fix)```
+- SSDT-PLUG ```(Plugin type to 1 for CPU0/PR00)```
+- SSDT-PNLF ```(PNLF device for WhateverGreen)```
+- SSDT-PWRB ```(Power button)```
+- SSDT-SMBUS ```(Injects missing DVL0 device)```
+- SSDT-THINK ```(ThinkVPC (YogaSMC))```
+- USBMap.kext (USB Mapping for ```MacBookPro11,1```, ```MacBookPro11,4``` and ```MacBookPro12,1```)
 
 OpenCore is licensed under the [BSD 3-Clause License](https://github.com/acidanthera/OpenCorePkg/blob/master/LICENSE.txt).
 

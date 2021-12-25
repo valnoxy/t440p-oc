@@ -4,9 +4,7 @@
 <p align="center">
    <strong>Status: Maintained</strong>
    <br />
-   <strong>Version: </strong>1.7.0-dev
-   <br />
-   <strong>Note: </strong>Not for production system!
+   <strong>Version: </strong>1.7.0
    <br />
    <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
    <br />
@@ -27,9 +25,6 @@
 ![macOS-Stable](https://img.shields.io/badge/macOS-Catalina-brightgreen.svg)
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
-
-## ⚠️ Before continuing 
-This is the develop branch. These configurations should not be used on a production system. 
 
 ## ⚠️ Disclaimer
 This guide is only for the Lenovo ThinkPad T440p. I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
@@ -191,7 +186,7 @@ The process is the following:
 - Download GenSMBIOS as a ZIP, then extract it.
 - Start GenSMBIOS.bat and use option 1 to download MacSerial.
 - Choose option 2, to select the path of the config.plist file. It will be located in EFI -> OC folder.
-- Choose option 3, and enter ```MacBookPro12,1``` as the machine type.
+- Choose option 3, and enter ```MacBookPro11,4``` as the machine type.
 - Press Q to quit. Your config now should contain the requied serials.
 
 #### Enter the proper ROM value

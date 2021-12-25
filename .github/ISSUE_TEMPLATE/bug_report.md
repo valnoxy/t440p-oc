@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+**Note**: Please use the Discussions tab if you have any ideas or a question. 
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 

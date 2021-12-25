@@ -9,7 +9,8 @@
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
 
-### Version 1.7.0-dev (Last update: 20.12.2021)
+### Version 1.7.0 (25.12.2021)
+- OpenCore to ```0.7.6```
 - Kext Changes
   - New / Updated
     - AppleALC to ```1.6.7```
@@ -22,6 +23,10 @@
     - USBMap to ```1.0.1```
 - Config Changes
   - New Model: ```MacBookPro12,1``` to ```MacBookPro11,4```
+  - Removed Debug and verbose boot arg
+  - SecureBootModel from ```Default``` to ```Disabled```
+  - ScanTarget from ```67``` to ```3```
+  - Removed outdated drivers
 
 ### Version 1.6.0 (25.10.2021)
 - OpenCore to ```0.7.4```

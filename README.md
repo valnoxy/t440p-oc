@@ -21,7 +21,7 @@
 
 <br />
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.6-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-Monterey-brightgreen.svg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-BigSur-brightgreen.svg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-Catalina-brightgreen.svg)
@@ -30,8 +30,6 @@
 
 ## ⚠️ Before continuing 
 This is the develop branch. These configurations should not be used on a production system. 
-
-I will push the first commits for ```Version 1.7.0``` in the next few days. These will fix some issues.
 
 ## ⚠️ Disclaimer
 This guide is only for the Lenovo ThinkPad T440p. I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.

@@ -29,6 +29,9 @@
 ## ⚠️ Disclaimer
 This guide is only for the Lenovo ThinkPad T440p. I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
 
+<a href="https://github.com/valnoxy/t440p-oc/tree/develop"><strong>
+Switch to develop branch »</strong></a>
+
 ## ℹ️ Information
 <details> 
 <summary><strong>Table of contents</strong></summary>
@@ -293,7 +296,6 @@ If you plan to upgrade your macOS (or updating the EFI / switching to HeliPort),
 If you want to upgrade macOS, download the desired macOS version in the Settings app and perform the upgrade like on a real Mac.
 
 ## ⭐️ Feedback
-
 Did you find any bugs or just have some questions? Feel free to provide your feedback using the Discussions tab.
 
 ## 📜 License

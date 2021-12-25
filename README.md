@@ -306,9 +306,9 @@ Did you find any bugs or just have some questions? Feel free to provide your fee
 This repo is licensed under the [MIT License](https://github.com/valnoxy/t440p-oc/blob/main/LICENSE).
 
 The following files are licensed under the [MIT License](https://github.com/valnoxy/t440p-oc/blob/main/LICENSE):
+- SSDT-HPET ```(source code included)```
 - SSDT-PLUG ```(source code included)```
 - SSDT-PNLF ```(source code included)```
-- SSDT-GPI0 ```(source code included)```
 - USBMap.kext (USB Mapping for MacBookPro11,4)
 
 OpenCore is licensed under the [BSD 3-Clause License](https://github.com/acidanthera/OpenCorePkg/blob/master/LICENSE.txt).

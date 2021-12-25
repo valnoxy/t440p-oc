@@ -8,7 +8,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Power Resources for Wake</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -16,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Fake ambient light sensor</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -24,7 +24,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Battery driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -32,7 +32,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Disable EHCI controller</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -40,7 +40,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>ACPI driver for OEM hardware (YogaSMC)</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -56,7 +56,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Brightness patch</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -64,7 +64,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>LED and Power Button blink patch</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -72,7 +72,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>AppleSMBus Fix</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -80,7 +80,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Plugin type</string>
+				<string>Plugin type to 1 for CPU0/PR00</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -96,7 +96,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Power button</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -104,11 +104,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>TODO: Recreate file</string>
+				<string>Injects missing DVL0 device</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-SMBUS.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ThinkVPC (YogaSMC)</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-THINK.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -1173,6 +1181,8 @@
 			<integer>0</integer>
 			<key>RebuildAppleMemoryMap</key>
 			<false/>
+			<key>ResizeAppleGpuBars</key>
+			<integer>-1</integer>
 			<key>SetupVirtualMap</key>
 			<true/>
 			<key>SignalAppleOS</key>
@@ -1242,6 +1252,24 @@
 		<array>
 			<dict>
 				<key>BundlePath</key>
+				<string>ACPIBatteryManager.kext</string>
+				<key>Comment</key>
+				<string>ACPIBatteryManager.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/ACPIBatteryManager</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
 				<string>AirportItlwm.kext</string>
 				<key>Comment</key>
 				<string>AirportItlwm.kext</string>
@@ -1249,6 +1277,60 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AirportItlwm</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>CodecCommander.kext</string>
+				<key>Comment</key>
+				<string>CodecCommander.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/CodecCommander</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>IntelBluetoothFirmware.kext</string>
+				<key>Comment</key>
+				<string>IntelBluetoothFirmware.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/IntelBluetoothFirmware</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>IntelBluetoothInjector.kext</string>
+				<key>Comment</key>
+				<string>IntelBluetoothInjector.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
 				<key>Arch</key>
 				<string>Any</string>
 				<key>MaxKernel</key>
@@ -1285,6 +1367,42 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/Lilu</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>RealtekCardReader.kext</string>
+				<key>Comment</key>
+				<string>RealtekCardReader.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/RealtekCardReader</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>RealtekCardReaderFriend.kext</string>
+				<key>Comment</key>
+				<string>RealtekCardReaderFriend.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/RealtekCardReaderFriend</string>
 				<key>Arch</key>
 				<string>Any</string>
 				<key>MaxKernel</key>
@@ -1357,6 +1475,24 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/WhateverGreen</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>YogaSMC.kext</string>
+				<key>Comment</key>
+				<string>YogaSMC.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/YogaSMC</string>
 				<key>Arch</key>
 				<string>Any</string>
 				<key>MaxKernel</key>
@@ -1476,6 +1612,24 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
+				<string>FeatureUnlock.kext</string>
+				<key>Comment</key>
+				<string>FeatureUnlock.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/FeatureUnlock</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
 				<string>HibernationFixup.kext</string>
 				<key>Comment</key>
 				<string>HibernationFixup.kext</string>
@@ -1527,114 +1681,6 @@
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>FeatureUnlock.kext</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-				<key>Enabled</key>
-				<true/>
-				<key>MinKernel</key>
-				<string></string>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/FeatureUnlock</string>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>FeatureUnlock.kext</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>YogaSMC.kext</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-				<key>Enabled</key>
-				<true/>
-				<key>MinKernel</key>
-				<string></string>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/YogaSMC</string>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>YogaSMC.kext</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IntelBluetoothFirmware.kext</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-				<key>Enabled</key>
-				<true/>
-				<key>MinKernel</key>
-				<string></string>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/IntelBluetoothFirmware</string>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>IntelBluetoothFirmware.kext</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IntelBluetoothInjector.kext</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-				<key>Enabled</key>
-				<true/>
-				<key>MinKernel</key>
-				<string></string>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>IntelBluetoothInjector.kext</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>ACPIBatteryManager.kext</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-				<key>Enabled</key>
-				<true/>
-				<key>MinKernel</key>
-				<string></string>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/ACPIBatteryManager</string>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>ACPIBatteryManager.kext</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>CodecCommander.kext</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-				<key>Enabled</key>
-				<true/>
-				<key>MinKernel</key>
-				<string></string>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/CodecCommander</string>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>CodecCommander.kext</string>
 			</dict>
 		</array>
 		<key>Block</key>
@@ -1969,7 +2015,7 @@
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>HideAuxiliary</key>
-			<false/>
+			<true/>
 			<key>LauncherOption</key>
 			<string>Disabled</string>
 			<key>LauncherPath</key>
@@ -2008,7 +2054,7 @@
 			<key>SysReport</key>
 			<false/>
 			<key>Target</key>
-			<integer>67</integer>
+			<integer>3</integer>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -2060,12 +2106,273 @@
 			<key>ScanPolicy</key>
 			<integer>0</integer>
 			<key>SecureBootModel</key>
-			<string>Default</string>
+			<string>Disabled</string>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
 		<key>Tools</key>
-		<array/>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>BootKicker.efi</string>
+				<key>Comment</key>
+				<string>BootKicker.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>BootKicker.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>ChipTune.efi</string>
+				<key>Comment</key>
+				<string>ChipTune.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ChipTune.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>CleanNvram.efi</string>
+				<key>Comment</key>
+				<string>CleanNvram.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>CleanNvram.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>ControlMsrE2.efi</string>
+				<key>Comment</key>
+				<string>ControlMsrE2.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ControlMsrE2.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>CsrUtil.efi</string>
+				<key>Comment</key>
+				<string>CsrUtil.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>CsrUtil.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>GopStop.efi</string>
+				<key>Comment</key>
+				<string>GopStop.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>GopStop.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>KeyTester.efi</string>
+				<key>Comment</key>
+				<string>KeyTester.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>KeyTester.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>MmapDump.efi</string>
+				<key>Comment</key>
+				<string>MmapDump.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>MmapDump.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>OpenControl.efi</string>
+				<key>Comment</key>
+				<string>OpenControl.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>OpenControl.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>OpenShell.efi</string>
+				<key>Comment</key>
+				<string>OpenShell.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>OpenShell.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>ResetSystem.efi</string>
+				<key>Comment</key>
+				<string>ResetSystem.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ResetSystem.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>RtcRw.efi</string>
+				<key>Comment</key>
+				<string>RtcRw.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>RtcRw.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>TpmInfo.efi</string>
+				<key>Comment</key>
+				<string>TpmInfo.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>TpmInfo.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>NVRAM</key>
 	<dict>
@@ -2075,8 +2382,6 @@
 			<dict>
 				<key>DefaultBackgroundColor</key>
 				<data>AAAAAA==</data>
-				<key>UIScale</key>
-				<data>AQ==</data>
 			</dict>
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
 			<dict>
@@ -2090,7 +2395,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100</string>
+				<string>keepsyms=1</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -2103,7 +2408,6 @@
 		<dict>
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<array>
-				<string>UIScale</string>
 				<string>DefaultBackgroundColor</string>
 			</array>
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
@@ -2174,7 +2478,7 @@
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>SystemProductName</key>
-			<string>MacBookPro12,1</string>
+			<string>MacBookPro11,4</string>
 			<key>SystemSerialNumber</key>
 			<string>000000000000</string>
 			<key>SystemUUID</key>
@@ -2254,11 +2558,21 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>AudioDxe.efi</string>
+				<string>ExFatDxe.efi</string>
 				<key>Arguments</key>
 				<string></string>
 				<key>Comment</key>
-				<string>AudioDxe.efi</string>
+				<string>ExFatDxe.efi</string>
+			</dict>
+			<dict>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ext4_x64.efi</string>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>ext4_x64.efi</string>
 			</dict>
 			<dict>
 				<key>Enabled</key>
@@ -2284,16 +2598,6 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>OpenHfsPlus.efi</string>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string>OpenHfsPlus.efi</string>
-			</dict>
-			<dict>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
 				<string>OpenLinuxBoot.efi</string>
 				<key>Arguments</key>
 				<string></string>
@@ -2304,61 +2608,11 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>OpenPartitionDxe.efi</string>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string>OpenPartitionDxe.efi</string>
-			</dict>
-			<dict>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
 				<string>OpenRuntime.efi</string>
 				<key>Arguments</key>
 				<string></string>
 				<key>Comment</key>
 				<string>OpenRuntime.efi</string>
-			</dict>
-			<dict>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>UsbMouseDxe.efi</string>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string>UsbMouseDxe.efi</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>btrfs_x64.efi</string>
-				<key>Path</key>
-				<string>btrfs_x64.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Arguments</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>ExFatDxe.efi</string>
-				<key>Path</key>
-				<string>ExFatDxe.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Arguments</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>ext4_x64.efi</string>
-				<key>Path</key>
-				<string>ext4_x64.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Arguments</key>
-				<string></string>
 			</dict>
 		</array>
 		<key>Input</key>
@@ -2396,6 +2650,8 @@
 			<false/>
 			<key>ProvideConsoleGop</key>
 			<true/>
+			<key>ReconnectGraphicsOnConnect</key>
+			<false/>
 			<key>ReconnectOnResChange</key>
 			<false/>
 			<key>ReplaceTabWithSpace</key>
@@ -2406,6 +2662,8 @@
 			<false/>
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
+			<key>UIScale</key>
+			<integer>0</integer>
 			<key>UgaPassThrough</key>
 			<false/>
 		</dict>
@@ -2456,6 +2714,8 @@
 			<false/>
 			<key>EnableVectorAcceleration</key>
 			<true/>
+			<key>EnableVmx</key>
+			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>ForceOcWriteFlash</key>
@@ -2470,6 +2730,8 @@
 			<false/>
 			<key>RequestBootVarRouting</key>
 			<true/>
+			<key>ResizeGpuBars</key>
+			<integer>-1</integer>
 			<key>TscSyncTimeout</key>
 			<integer>0</integer>
 			<key>UnblockFsConnect</key>

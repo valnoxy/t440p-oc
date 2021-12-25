@@ -4,7 +4,7 @@
 <p align="center">
    <strong>Status: Maintained</strong>
    <br />
-   <strong>Version: </strong>1.6.0
+   <strong>Version: </strong>1.7.0
    <br />
    <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
    <br />
@@ -19,7 +19,7 @@
 
 <br />
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.6-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-Monterey-brightgreen.svg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-BigSur-brightgreen.svg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-Catalina-brightgreen.svg)
@@ -37,7 +37,7 @@ Switch to develop branch »</strong></a>
 <summary><strong>Table of contents</strong></summary>
 
    * [Introduction](#-introduction)
-      * [Migrate to Version 1.5.0](#migrate-to-version-150)
+      * [Migrate to Version 1.7.0](#migrate-to-version-170)
       * [EFI folders](#efi-folders)
    * [Features](#-features)
    * [Usage](#-usage)
@@ -74,10 +74,10 @@ These are the Hardware component I use. But this OpenCore configuation **should 
 </details>  
 
 ## 🔔 Introduction
----
 
-### Migrate to Version 1.5.0
-The Version 1.5.0 changes the model from ```MacBookPro11,1``` to ```MacBookPro12,1```. You need to generate a new SMBIOS for the new model with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
+
+### Migrate to Version 1.7.0
+The Version 1.7.0 changes the model from ```MacBookPro12,1``` to ```MacBookPro11,4```. You need to generate a new SMBIOS for the new model with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
 
 ### EFI folders
 This repo includes multiple EFI configuations for different macOS Versions.
@@ -95,7 +95,7 @@ Differences to the EFI folders »</strong></a> <br/> <a href="https://github.com
 Download HeliPort app »</strong></a>
 
 ## ✨ Features
----
+
 ### What works
 - Intel WiFi & Bluetooth (thanks to [itlwn](https://github.com/OpenIntelWireless/itlwm))
 - Brightness / Volume Control
@@ -126,7 +126,7 @@ Download HeliPort app »</strong></a>
    - Workaround: Use ```Firefox``` or ```Chrome```.
 
 # 📖 Usage
----
+
 ## 📝 Requirements
 You must have the following stuff:
 - Lenovo ThinkPad T440p (Obviously 😁).
@@ -136,7 +136,7 @@ You must have the following stuff:
 - 1-2 hours of your time.
 
 ## ⚙️ Preperation
----
+
 >   **Note**: If you want to install macOS Monterey, you need to upgrade from Big Sur, or create an **offline** install media (see down below).
 
 ### Create the install media
@@ -189,7 +189,7 @@ The process is the following:
 - Download GenSMBIOS as a ZIP, then extract it.
 - Start GenSMBIOS.bat and use option 1 to download MacSerial.
 - Choose option 2, to select the path of the config.plist file. It will be located in EFI -> OC folder.
-- Choose option 3, and enter ```MacBookPro12,1``` as the machine type.
+- Choose option 3, and enter ```MacBookPro11,4``` as the machine type.
 - Press Q to quit. Your config now should contain the requied serials.
 
 #### Enter the proper ROM value
@@ -206,7 +206,7 @@ The default keyboard layout and language is ```German```. To change the language
 After you've finished with the neccesary tweaks, you have to copy the EFI folder to the EFI partition of your pendrive.
 
 ## 🚚 Installation
----
+
 ### Prepare BIOS
 The bios must be properly configured prior to installing macOS.
 In Security menu, set the following settings:
@@ -238,7 +238,7 @@ Now you can go through the install.
 6. Create your user accound and everything else.
 
 ## 🚚 Post-Install
----
+
 ### Install EFI
 1. Press `WIN + SPACE` and open terminal. Type `sudo diskutil mountDisk disk0s1` (where disk0s1 corresponds to the EFI partition of the main disk)
 2. Open Finder and copy the EFI folder of your USB device to the main disk's EFI partition.
@@ -279,7 +279,7 @@ Monterey:
 After creating the install media, copy your EFI folder to the EFI partition of your USB device.
 
 ## ♻️ Upgrade macOS / Switch EFI
----
+
 If you plan to upgrade your macOS (or updating the EFI / switching to HeliPort), you'll need a different OpenCore configuation (EFI). Please follow these steps:
 
 > Note: Download the desired macOS version in the Settings before following these steps, if you are connected via WiFi.
@@ -296,22 +296,32 @@ If you plan to upgrade your macOS (or updating the EFI / switching to HeliPort),
 If you want to upgrade macOS, download the desired macOS version in the Settings app and perform the upgrade like on a real Mac.
 
 ## ⭐️ Feedback
----
 Did you find any bugs or just have some questions? Feel free to provide your feedback using the Discussions tab.
 
 ## 📜 License
----
+
 This repo is licensed under the [MIT License](https://github.com/valnoxy/t440p-oc/blob/main/LICENSE).
 
 The following files are licensed under the [MIT License](https://github.com/valnoxy/t440p-oc/blob/main/LICENSE):
-- SSDT-PLUG ```(source code included)```
-- SSDT-PNLF ```(source code included)```
-- SSDT-GPI0 ```(source code included)```
-- USBMap.kext (USB Mapping for MacBookPro12,1)
+- SSDT-ADPT ```(Power Resources for Wake)```
+- SSDT-ALS0 ```(Fake ambient light sensor)```
+- SSDT-BATX ```(Battery driver)```
+- SSDT-DEHCI ```(Disable EHCI controller)```
+- SSDT-ECRW ```(ACPI driver for OEM hardware (YogaSMC))```
+- SSDT-HPET ```(IRQ Conflicts fix (Needs _CRS to XCRS Rename))```
+- SSDT-KBD ```(Brightness patch)```
+- SSDT-LED ```(LED and Power Button blink patch)```
+- SSDT-MCHC ```(AppleSMBus fix)```
+- SSDT-PLUG ```(Plugin type to 1 for CPU0/PR00)```
+- SSDT-PNLF ```(PNLF device for WhateverGreen)```
+- SSDT-PWRB ```(Power button)```
+- SSDT-SMBUS ```(Injects missing DVL0 device)```
+- SSDT-THINK ```(ThinkVPC (YogaSMC))```
+- USBMap.kext (USB Mapping for ```MacBookPro11,1```, ```MacBookPro11,4``` and ```MacBookPro12,1```)
 
 OpenCore is licensed under the [BSD 3-Clause License](https://github.com/acidanthera/OpenCorePkg/blob/master/LICENSE.txt).
 
 You can feely use these files for your projects, but please mention me.
 
 ---
-```Copyright (c) 2018 - 2021 valnoxy. By Jonas G. <jonas@exploitox.de>```
+```Copyright (c) 2018 - 2022 valnoxy. By Jonas G. <jonas@exploitox.de>```

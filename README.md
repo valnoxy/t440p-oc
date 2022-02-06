@@ -228,7 +228,7 @@ In Startup menu, set the following options:
 Now you can go through the install.
 
 ### Install macOS
-1. Boot from USB and select the USB drive inside of OpenCore.
+1. Boot from USB, press ```SPACE``` and select the USB drive inside of OpenCore ```"NO NAME (DMG)" or similar```.
 >  **Note:** The first boot may take up to 20 minutes.
 2. Wait for the macOS Utilities screen.
 3. Select Disk Utility, select your disk and click erase. Give a name and choose **APFS** with **GUID Partition Map**.

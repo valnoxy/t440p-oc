@@ -19,7 +19,7 @@
 
 <br />
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.6-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.7-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-Monterey-brightgreen.svg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-BigSur-brightgreen.svg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-Catalina-brightgreen.svg)
@@ -37,7 +37,7 @@ Switch to develop branch »</strong></a>
 <summary><strong>Table of contents</strong></summary>
 
    * [Introduction](#-introduction)
-      * [Migrate to Version 1.7.0](#migrate-to-version-170)
+      * [Migrate to Version 1.7.0 and higher](#migrate-to-version-170-and-higher)
       * [EFI folders](#efi-folders)
    * [Features](#-features)
    * [Usage](#-usage)
@@ -76,7 +76,7 @@ These are the Hardware component I use. But this OpenCore configuation **should 
 ## 🔔 Introduction
 
 
-### Migrate to Version 1.7.0
+### Migrate to Version 1.7.0 and higher
 The Version 1.7.0 changes the model from ```MacBookPro12,1``` to ```MacBookPro11,4```. You need to generate a new SMBIOS for the new model with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
 
 ### EFI folders

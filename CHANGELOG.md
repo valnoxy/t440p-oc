@@ -18,7 +18,7 @@
     - Lilu to ```1.5.9```
     - VoodooPS2Controller to ```2.2.7```
     - WhateverGreen to ```1.5.6```
-    - Replaced BlueToolFixup with IntelBluetoothInjector (issue #42)
+    - Replaced IntelBluetoothInjector with BlueToolFixup (issue #42)
 - Config Changes
   - Added SystemAudioVolumeDB key ```(NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82)```
   - Added PointerPollMask key ```(NVRAM -> Add -> AppleInput)```

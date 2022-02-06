@@ -9,8 +9,9 @@
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
 
-### Version 1.7.1 (last commit: 06.02.2022)
+### Version 1.7.1 (07.02.2022)
 - OpenCore to ```0.7.7```
+- README: Add note for missing installer in boot picker (issue #40)
 - Kext Changes
   - New / Updated
     - AppleALC to ```1.6.8```

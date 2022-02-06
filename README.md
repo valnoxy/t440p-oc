@@ -4,7 +4,7 @@
 <p align="center">
    <strong>Status: Maintained</strong>
    <br />
-   <strong>Version: </strong>1.7.1-develop
+   <strong>Version: </strong>1.7.1
    <br />
    <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
    <br />

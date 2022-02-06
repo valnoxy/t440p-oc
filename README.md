@@ -4,7 +4,7 @@
 <p align="center">
    <strong>Status: Maintained</strong>
    <br />
-   <strong>Version: </strong>1.7.0
+   <strong>Version: </strong>1.7.1
    <br />
    <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
    <br />
@@ -19,7 +19,7 @@
 
 <br />
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.6-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.7-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-Monterey-brightgreen.svg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-BigSur-brightgreen.svg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-Catalina-brightgreen.svg)
@@ -37,7 +37,7 @@ Switch to develop branch »</strong></a>
 <summary><strong>Table of contents</strong></summary>
 
    * [Introduction](#-introduction)
-      * [Migrate to Version 1.7.0](#migrate-to-version-170)
+      * [Migrate to Version 1.7.0 and higher](#migrate-to-version-170-and-higher)
       * [EFI folders](#efi-folders)
    * [Features](#-features)
    * [Usage](#-usage)
@@ -76,7 +76,7 @@ These are the Hardware component I use. But this OpenCore configuation **should 
 ## 🔔 Introduction
 
 
-### Migrate to Version 1.7.0
+### Migrate to Version 1.7.0 and higher
 The Version 1.7.0 changes the model from ```MacBookPro12,1``` to ```MacBookPro11,4```. You need to generate a new SMBIOS for the new model with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
 
 ### EFI folders
@@ -156,7 +156,7 @@ python macrecovery.py -b Mac-00BE6ED71E35EB86 -m 00000000000000000 download
 python macrecovery.py -b Mac-42FD25EABCABB274 -m 00000000000000000 download
 
 # Monterey (12)
-python ./macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download
+python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download
 ```
 - After the download succeeded, type ```diskpart``` and wait until you see ```DISKPART>```
 
@@ -228,7 +228,7 @@ In Startup menu, set the following options:
 Now you can go through the install.
 
 ### Install macOS
-1. Boot from USB and select the USB drive inside of OpenCore.
+1. Boot from USB, press ```SPACE``` and select the USB drive inside of OpenCore ```"NO NAME (DMG)" or similar```.
 >  **Note:** The first boot may take up to 20 minutes.
 2. Wait for the macOS Utilities screen.
 3. Select Disk Utility, select your disk and click erase. Give a name and choose **APFS** with **GUID Partition Map**.

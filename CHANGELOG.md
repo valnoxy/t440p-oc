@@ -9,6 +9,31 @@
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
 
+### Version 1.7.1 (07.02.2022)
+- OpenCore to ```0.7.7```
+- README: Add note for missing installer in boot picker (issue #40)
+- Kext Changes
+  - New / Updated
+    - AppleALC to ```1.6.8```
+    - FeatureUnlock to ```1.0.5```
+    - Lilu to ```1.5.9```
+    - VoodooPS2Controller to ```2.2.7```
+    - WhateverGreen to ```1.5.6```
+    - Replaced IntelBluetoothInjector with BlueToolFixup (issue #42)
+- Config Changes
+  - Added SystemAudioVolumeDB key ```(NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82)```
+  - Added PointerPollMask key ```(NVRAM -> Add -> AppleInput)```
+  - Added PointerPollMax key ```(NVRAM -> Add -> AppleInput)```
+  - Added PointerPollMin key ```(NVRAM -> Add -> AppleInput)```
+  - Removed AudioOut key ```(UEFI -> APFS -> Audio)```
+  - Added AudioOutMask key ```(UEFI -> APFS -> Audio)```
+  - Removed MinimumVolume key ```(UEFI -> APFS -> Audio)```
+  - Added DisconnectHda key ```(UEFI -> APFS -> Audio)```
+  - Added MaximumGain key ```(UEFI -> APFS -> Audio)```
+  - Added MinimumAssistGain key ```(UEFI -> APFS -> Audio)```
+  - Added MinimumAudibleGain key ```(UEFI -> APFS -> Audio)```
+  - Removed VolumeAmplifier key ```(UEFI -> APFS -> Audio)```
+
 ### Version 1.7.0 (25.12.2021)
 - OpenCore to ```0.7.6```
 - Kext Changes

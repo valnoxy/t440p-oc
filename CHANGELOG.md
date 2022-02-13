@@ -9,6 +9,14 @@
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
 
+### Version 1.7.1 (13.02.2022)
+- OpenCore to ```0.7.8```
+- Kext Changes
+  - New / Updated
+    - Added VoodooRMI (issue #27)
+- Config Changes
+  - Disabled Kext ```VoodooInput.kext```
+
 ### Version 1.7.1 (07.02.2022)
 - OpenCore to ```0.7.7```
 - README: Add note for missing installer in boot picker (issue #40)

@@ -4,7 +4,7 @@
 <p align="center">
    <strong>Status: Maintained</strong>
    <br />
-   <strong>Version: </strong>1.7.1
+   <strong>Version: </strong>1.7.2-develop
    <br />
    <a href="https://github.com/valnoxy/t440p-oc/releases"><strong>Download now »</strong></a>
    <br />
@@ -19,7 +19,7 @@
 
 <br />
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.7-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.8-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-Monterey-brightgreen.svg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-BigSur-brightgreen.svg)
 ![macOS-Stable](https://img.shields.io/badge/macOS-Catalina-brightgreen.svg)

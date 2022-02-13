@@ -2397,7 +2397,7 @@
 				<key>SystemAudioVolumeDB</key>
 				<data>4g==</data>
 				<key>boot-args</key>
-				<string>keepsyms=1</string>
+				<string>keepsyms=1 -v</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>

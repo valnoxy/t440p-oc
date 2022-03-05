@@ -41,11 +41,11 @@ The Version 1.7.0 changes the model from ```MacBookPro12,1``` to ```MacBookPro11
 
 **Dualbooting**
 
-If you want to dualboot / multiboot your T440p with Windows or Linux, do not use OpenCore as bootloader! You need to use the efi boot menu in order to boot Windows or Linux. Legacy boot is not supported!
+If you want to dualboot / multiboot your T440p with Windows or Linux, do **not** use OpenCore as bootloader! You need to use the efi boot menu in order to boot Windows or Linux. Legacy boot is not supported!
 
 The reason: **ACPI Patches**
 
-These ACPI patches are necessary for booting macOS. OpenCore doesn't only patch macOS, but also Windows and Linux. Other operating systems handle the patches differently than macOS. If you decide to use OpenCore with other systems, you may expect some bugs like missing battery and WiFi issues.
+These ACPI patches are necessary for booting macOS. OpenCore doesn't only patch macOS, but also Windows and Linux. These operating systems handle the patches differently than macOS. If you decide to use OpenCore with other systems, you may expect some bugs like missing battery and WiFi issues.
 
 **EFI folders**
 

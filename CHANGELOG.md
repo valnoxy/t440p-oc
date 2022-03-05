@@ -9,11 +9,16 @@
 
 ![-----------------------------------------------------](https://dl.exploitox.de/t440p-oc/rainbow.png)
 
-### Version 1.7.1 (13.02.2022)
+### Version 1.7.2 (05.03.2022)
 - OpenCore to ```0.7.8```
 - Kext Changes
   - New / Updated
     - Added VoodooRMI (issue #27)
+    - AppleALC to ```1.6.9```
+    - FeatureUnlock to ```1.0.6```
+    - Lilu to ```1.6.0```
+    - VoodooPS2Controller to ```2.2.7```
+    - WhateverGreen to ```1.5.7```
 - Config Changes
   - Disabled Kext ```VoodooInput.kext```
 

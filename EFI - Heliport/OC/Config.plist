@@ -1488,9 +1488,9 @@
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooInput.kext</string>
 				<key>Comment</key>
-				<string>VoodooInput.kext</string>
+				<string>VoodooInput.kext - disabled for VoodooRMI</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooInput</string>
 				<key>Arch</key>
@@ -1673,6 +1673,78 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/BlueToolFixup</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>VoodooRMI.kext</string>
+				<key>Comment</key>
+				<string>VoodooRMI.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VoodooRMI</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>VoodooRMI.kext/Contents/PlugIns/RMII2C.kext</string>
+				<key>Comment</key>
+				<string>RMII2C.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/RMII2C</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>VoodooRMI.kext/Contents/PlugIns/RMISMBus.kext</string>
+				<key>Comment</key>
+				<string>RMISMBus.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/RMISMBus</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>VoodooRMI.kext/Contents/PlugIns/VoodooInput.kext</string>
+				<key>Comment</key>
+				<string>VoodooInput.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VoodooInput</string>
 				<key>Arch</key>
 				<string>Any</string>
 				<key>MaxKernel</key>

@@ -22,6 +22,7 @@
    <a href="https://www.youtube.com/watch?v=6Uz63UQiApQ">YouTube Video</a>
   </p>
 </p>
+</br>
 
 ## ⚠️ Disclaimer
 This guide is only for the Lenovo ThinkPad T440p. I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.

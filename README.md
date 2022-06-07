@@ -27,8 +27,11 @@
 ## ⚠️ Disclaimer
 This guide is only for the Lenovo ThinkPad T440p. I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
 
-<a href="https://github.com/valnoxy/t440p-oc/tree/develop"><strong>
-Switch to develop branch »</strong></a>
+> **Warning**
+> macOS Ventura is still in Beta! I do not recommend this for productive use!
+
+<a href="https://github.com/valnoxy/t440p-oc/pull/57"><strong>
+Current state of macOS Ventura »</strong></a>
 
 ## Introduction
 

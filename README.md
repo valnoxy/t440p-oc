@@ -19,7 +19,7 @@
    ·
    <a href="https://github.com/valnoxy/t440p-oc/blob/main/CHANGELOG.md">View Changelog</a>
    ·
-   <a href="https://www.youtube.com/watch?v=6Uz63UQiApQ">YouTube Video</a>
+   <a href="https://www.youtube.com/watch?v=thYDWyJuUq4">YouTube Video (2023)</a>
   </p>
 </p>
 </br>

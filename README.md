@@ -1,4 +1,4 @@
-﻿# Lenovo ThinkPad T440p - OpenCore Configuation
+# Lenovo ThinkPad T440p - OpenCore Configuation
 
 <img align="right" src="https://dl.exploitox.de/t440p-oc/Hackintosh_T440p_V4.jpg" alt="macOS Monterey running on the T440p" width="300">
 
@@ -61,6 +61,7 @@ This repo includes multiple EFI configuations for different macOS Versions.
 | `EFI - Big Sur`   | Supports only macOS Big Sur                              | `Stable`  |
 | `EFI - Monterey`  | Supports only macOS Monterey                             | `Stable`  |
 | `EFI - HeliPort`  | Supports every macOS Version, Require HeliPort app       | `Stable`  |
+| `EFI - Sonoma`    | Supports only macOS Sonoma                               | `Develop` |
 
 
 <a href="https://github.com/valnoxy/t440p-oc/blob/main/DIFFERENCES.md"><strong>
@@ -125,6 +126,9 @@ python macrecovery.py -b Mac-42FD25EABCABB274 -m 00000000000000000 download
 
 # Monterey (12)
 python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download
+
+# Sonoma (14)
+python macrecovery.py -b Mac-937A206F2EE63C01 -m 00000000000000000 download
 ```
 - After the download succeeded, type ```diskpart``` and wait until you see ```DISKPART>```
 
@@ -157,7 +161,7 @@ The process is the following:
 - Download GenSMBIOS as a ZIP, then extract it.
 - Start GenSMBIOS.bat and use option 1 to download MacSerial.
 - Choose option 2, to select the path of the config.plist file. It will be located in EFI -> OC folder.
-- Choose option 3, and enter ```MacBookPro11,4``` as the machine type.
+- Choose option 3, and enter ```MacBookPro11,4``` as the machine type, for sonoma use ```MacBookPro15,1```.
 - Press Q to quit. Your config now should contain the requied serials.
 
 #### Enter the proper ROM value
@@ -169,6 +173,7 @@ Delete the generic ```112233445566``` value, and enter your MAC address into the
 
 #### Default keyboard layout and language
 The default keyboard layout and language is ```German```. To change the language, edit the value of ```NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> prev-lang:kbd``` to the value of your language. If your value contains an underscore ```_```, replace it with a hyphen ```-```. The value for English would be ```en-US:0```. You can find a list of all language values [here](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt).
+For sonoma the layout is ```Italian```
 
 ### Install OpenCore
 After you've finished with the neccesary tweaks, you have to copy the EFI folder to the EFI partition of your pendrive.
@@ -335,6 +340,45 @@ After creating the install media, copy your EFI folder to the EFI partition of y
 - [ ] Apple Watch Unlock
 - [ ] WWAN
 
+</details>
+
+<details>  
+<summary><strong>🧑🏻‍💻 Sonoma</strong></summary>
+</br>
+
+- [✅] Intel WiFi 
+- [🔄] Bluetooth 
+- [✅] Brightness / Volume Control
+- [✅] Battery Information
+- [✅] Speaker
+- [🔄] Audio Jack
+- [✅] USB Ports & Built-in Camera
+- [🔄] Graphics Acceleration
+- [✅] Trackpoint / Touchpad
+- [🔄] Power management / Sleep
+- [✅] FaceTime / iMessage (iServices)
+- [🔄] DisplayPort
+- [🔄] Automatic OS updates
+- [🔄] DVD Drive (I have a second ssd so I cannot test)
+- [🔄] Dock USB / Display
+- [🔄] Handoff / Universal Clipboard
+- [🔄] Sidecar (Cable) / AirPlay to Mac (I don't have a Mac, cannot test)
+- [🔄] SIP / FireVault 2
+- [🔄] Safari DRM
+- [🔄] AirDrop & Continuity (I don't have a Mac or iPhone, cannot test)
+- [🔄] Fingerprint Reader
+- [🔄] VGA
+- [🔄] Sleep with Docking Station
+- [🔄] Dualbooting Windows / Linux
+- [🔄] Sidecar Wireless (I don't have an iPhone or iPad, cannot test)
+- [🔄] Apple Watch Unlock (I don't have an Apple Watch, cannot test)
+- [🔄] WWAN
+<br>
+Legend:
+ - ✅ Working
+ - ❌ Not Working
+ - 🔄 Not yet tested
+ 
 </details>
 
 ## ⭐️ Feedback

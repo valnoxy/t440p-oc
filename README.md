@@ -31,9 +31,9 @@ This guide is only for the Lenovo ThinkPad T440p. I am NOT responsible for any h
 > macOS Ventura is still in Beta! I do not recommend this for productive use!
 
 <a href="https://github.com/valnoxy/t440p-oc/pull/57"><strong>
-Current state of macOS Ventura »</strong></a>
+Current state of macOS Ventura »</strong></a><br>
 <a href="https://github.com/valnoxy/t440p-oc/pull/81"><strong>
-Current stato of macOS Sonoma »</strong></a>
+Current state of macOS Sonoma »</strong></a>
 
 ## Introduction
 
